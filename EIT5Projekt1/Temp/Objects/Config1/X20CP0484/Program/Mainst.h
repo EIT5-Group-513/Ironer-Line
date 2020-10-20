@@ -74,20 +74,3 @@ typedef struct {
 } _4byte_bit_field_;
 #endif
 
-#ifndef __AS__TYPE_Inverter_type
-#define __AS__TYPE_Inverter_type
-typedef struct Inverter_type
-{	unsigned short CTRL_Word;
-	signed short Set_RPM;
-	unsigned short Actual_CTRL_Word;
-	signed short RPM_After_Ramp;
-	unsigned short Error_Code;
-	unsigned short DC;
-	unsigned short Voltage;
-	unsigned short Current;
-	signed short Actual_Out_fq;
-	signed short Actual_RMP;
-} Inverter_type;
-#endif
-
-_GLOBAL Inverter_type Inverter;

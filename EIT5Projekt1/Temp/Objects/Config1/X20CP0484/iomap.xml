@@ -94,43 +94,43 @@
 </LN>
 <LN ID="%IW.IF3.ST1.ERRD_Input" Type="UINT">
 <Prod Device="IF3.ST1" DPName="ERRD_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.Error_Code" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.error_code" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.ETAD_Input" Type="UINT">
 <Prod Device="IF3.ST1" DPName="ETAD_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.Actual_CTRL_Word" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.CTRL_actual" Kind="pv"/>
 </LN>
 <LN ID="%QW.IF3.ST1.CMDD_Output" Type="UINT">
-<Prod Device="TC#4-CPYDEV" DPName="::Inverter.CTRL_Word" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="::inverter.CTRL_set" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="CMDD_Output" Kind="io"/>
 </LN>
 <LN ID="%QW.IF3.ST1.LFRD_Output" Type="INT">
-<Prod Device="TC#4-CPYDEV" DPName="::Inverter.Set_RPM" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="::inverter.RPM_set" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="LFRD_Output" Kind="io"/>
 </LN>
 <LN ID="%IW.IF3.ST1.FROD_Input" Type="INT">
 <Prod Device="IF3.ST1" DPName="FROD_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.RPM_After_Ramp" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.RPM_after_ramp" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.RFRD_Input" Type="INT">
 <Prod Device="IF3.ST1" DPName="RFRD_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.Actual_RMP" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.RPM_actual" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.RFR_Input" Type="INT">
 <Prod Device="IF3.ST1" DPName="RFR_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.Actual_Out_fq" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.freq" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.UOP_Input" Type="UINT">
 <Prod Device="IF3.ST1" DPName="UOP_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.Voltage" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.voltage" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.LCR_Input" Type="UINT">
 <Prod Device="IF3.ST1" DPName="LCR_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.Current" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.current" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.ULN_Input" Type="UINT">
 <Prod Device="IF3.ST1" DPName="ULN_Input" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::Inverter.DC" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::inverter.DC" Kind="pv"/>
 </LN>
 <LN ID="%IW.ModuleID_BB" Type="UINT">
 <Prod Device="$root" DPName="ModuleID_BB" Kind="io"/>
@@ -239,19 +239,16 @@
 </LN>
 <LN ID="%IW.IF6.ST1.Temperature01" Type="INT">
 <Prod Device="IF6.ST1" DPName="Temperature01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp1_1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::T_tank" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST1.Temperature02" Type="INT">
 <Prod Device="IF6.ST1" DPName="Temperature02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp1_2" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST1.Temperature03" Type="INT">
 <Prod Device="IF6.ST1" DPName="Temperature03" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp1_3" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST1.Temperature04" Type="INT">
 <Prod Device="IF6.ST1" DPName="Temperature04" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp1_4" Kind="pv"/>
 </LN>
 <LN ID="%IB.IF6.ST1.StatusInput01" Type="USINT">
 <Prod Device="IF6.ST1" DPName="StatusInput01" Kind="io"/>
@@ -312,19 +309,17 @@
 </LN>
 <LN ID="%IW.IF6.ST2.Temperature01" Type="INT">
 <Prod Device="IF6.ST2" DPName="Temperature01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp2_1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::mulde_1.T_in" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST2.Temperature02" Type="INT">
 <Prod Device="IF6.ST2" DPName="Temperature02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp2_2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::mulde_1.T_out" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST2.Temperature03" Type="INT">
 <Prod Device="IF6.ST2" DPName="Temperature03" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp2_3" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST2.Temperature04" Type="INT">
 <Prod Device="IF6.ST2" DPName="Temperature04" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp2_4" Kind="pv"/>
 </LN>
 <LN ID="%IB.IF6.ST2.StatusInput01" Type="USINT">
 <Prod Device="IF6.ST2" DPName="StatusInput01" Kind="io"/>
@@ -385,19 +380,17 @@
 </LN>
 <LN ID="%IW.IF6.ST3.Temperature01" Type="INT">
 <Prod Device="IF6.ST3" DPName="Temperature01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp3_1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::mulde_2.T_in" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST3.Temperature02" Type="INT">
 <Prod Device="IF6.ST3" DPName="Temperature02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp3_2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::mulde_2.T_out" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST3.Temperature03" Type="INT">
 <Prod Device="IF6.ST3" DPName="Temperature03" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp3_3" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST3.Temperature04" Type="INT">
 <Prod Device="IF6.ST3" DPName="Temperature04" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp3_4" Kind="pv"/>
 </LN>
 <LN ID="%IB.IF6.ST3.StatusInput01" Type="USINT">
 <Prod Device="IF6.ST3" DPName="StatusInput01" Kind="io"/>
@@ -458,19 +451,17 @@
 </LN>
 <LN ID="%IW.IF6.ST4.Temperature01" Type="INT">
 <Prod Device="IF6.ST4" DPName="Temperature01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp4_1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::mulde_3.T_in" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST4.Temperature02" Type="INT">
 <Prod Device="IF6.ST4" DPName="Temperature02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp4_2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="::mulde_3.T_out" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST4.Temperature03" Type="INT">
 <Prod Device="IF6.ST4" DPName="Temperature03" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp4_3" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST4.Temperature04" Type="INT">
 <Prod Device="IF6.ST4" DPName="Temperature04" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::Temp4_4" Kind="pv"/>
 </LN>
 <LN ID="%IB.IF6.ST4.StatusInput01" Type="USINT">
 <Prod Device="IF6.ST4" DPName="StatusInput01" Kind="io"/>
@@ -531,19 +522,15 @@
 </LN>
 <LN ID="%IX.IF6.ST5.DigitalInput01" Type="BOOL">
 <Prod Device="IF6.ST5" DPName="DigitalInput01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::DigitalIn01" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST5.DigitalInput02" Type="BOOL">
 <Prod Device="IF6.ST5" DPName="DigitalInput02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::DigitalIn02" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST5.DigitalInput03" Type="BOOL">
 <Prod Device="IF6.ST5" DPName="DigitalInput03" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::DigitalIn03" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST5.DigitalInput04" Type="BOOL">
 <Prod Device="IF6.ST5" DPName="DigitalInput04" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::DigitalIn04" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST5.DigitalInput05" Type="BOOL">
 <Prod Device="IF6.ST5" DPName="DigitalInput05" Kind="io"/>
@@ -624,19 +611,16 @@
 <Prod Device="IF6.ST6" DPName="FirmwareVersion" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST6.DigitalOutput01" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="::DigitalOut01" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="::heater" Kind="pv"/>
 <Cons Device="IF6.ST6" DPName="DigitalOutput01" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST6.DigitalOutput02" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="::DigitalOut02" Kind="pv"/>
 <Cons Device="IF6.ST6" DPName="DigitalOutput02" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST6.DigitalOutput03" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="::DigitalOut03" Kind="pv"/>
 <Cons Device="IF6.ST6" DPName="DigitalOutput03" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST6.DigitalOutput04" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="::DigitalOut04" Kind="pv"/>
 <Cons Device="IF6.ST6" DPName="DigitalOutput04" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST6.DigitalOutput05" Type="BOOL">
@@ -758,15 +742,12 @@
 </LN>
 <LN ID="%IW.IF6.ST7.AnalogInput01" Type="INT">
 <Prod Device="IF6.ST7" DPName="AnalogInput01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::PBS1_1" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST7.AnalogInput02" Type="INT">
 <Prod Device="IF6.ST7" DPName="AnalogInput02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::PBS1_2" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST7.AnalogInput03" Type="INT">
 <Prod Device="IF6.ST7" DPName="AnalogInput03" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::PBS1_3" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST7.AnalogInput04" Type="INT">
 <Prod Device="IF6.ST7" DPName="AnalogInput04" Kind="io"/>
@@ -833,15 +814,12 @@
 </LN>
 <LN ID="%IW.IF6.ST8.AnalogInput01" Type="INT">
 <Prod Device="IF6.ST8" DPName="AnalogInput01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::PBS2_1" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST8.AnalogInput02" Type="INT">
 <Prod Device="IF6.ST8" DPName="AnalogInput02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::PBS2_2" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST8.AnalogInput03" Type="INT">
 <Prod Device="IF6.ST8" DPName="AnalogInput03" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="::PBS2_3" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST8.AnalogInput04" Type="INT">
 <Prod Device="IF6.ST8" DPName="AnalogInput04" Kind="io"/>

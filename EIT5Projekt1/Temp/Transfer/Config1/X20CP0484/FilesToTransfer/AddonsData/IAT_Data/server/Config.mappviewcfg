@@ -5,12 +5,9 @@
       <Selector ID="WebServerProtocol" Value="1">
         <Property ID="WebServerPort" Value="81" />
       </Selector>
-      <Property ID="MaxClientConnections" Value="3" />
+      <Property ID="MaxClientConnections" Value="1" />
       <Property ID="MaxBRClientConnections" Value="0" />
       <Selector ID="ClientConnectionsLicensingMode" Value="LicensingModeConfiguredMaxClients" />
-      <Group ID="TcpProxyConf">
-        <Selector ID="InsecureMode" Value="1" />
-      </Group>
     </Group>
     <Group ID="OpcUa">
       <Group ID="SamplingRates">
@@ -21,8 +18,8 @@
     </Group>
     <Group ID="Client">
       <Group ID="ContentCaching">
-        <Property ID="cachingSlots" Value="200" />
-        <Property ID="preserveOldValues" Value="TRUE" />
+        <Property ID="slots" Value="0" />
+        <Property ID="preserveOldValues" />
       </Group>
     </Group>
   </Element>

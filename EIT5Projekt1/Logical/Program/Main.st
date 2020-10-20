@@ -1,6 +1,6 @@
 
 PROGRAM _INIT
-	Inverter;
+	
 	
 END_PROGRAM
 

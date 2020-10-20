@@ -8,20 +8,7 @@
   </Aliases>
   <DefaultView>
     <Module Name="&lt;Default&gt;">
-      <GlobalVariables Name="Global Variables">
-        <Variable Name="Inverter">
-          <Variable Name="CTRL_Word" />
-          <Variable Name="Set_RPM" />
-          <Variable Name="Actual_CTRL_Word" />
-          <Variable Name="RPM_After_Ramp" />
-          <Variable Name="Error_Code" />
-          <Variable Name="DC" />
-          <Variable Name="Voltage" />
-          <Variable Name="Current" />
-          <Variable Name="Actual_Out_fq" />
-          <Variable Name="Actual_RMP" />
-        </Variable>
-      </GlobalVariables>
+      <GlobalVariables Name="Global Variables" />
     </Module>
   </DefaultView>
 </OpcUaSource>
