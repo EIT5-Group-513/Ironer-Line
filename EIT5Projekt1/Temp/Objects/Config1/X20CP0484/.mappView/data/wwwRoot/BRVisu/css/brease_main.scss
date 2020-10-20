@@ -1,0 +1,93 @@
+@import "libs/variables.scss";
+@import "libs/mixins.scss";
+@import "libs/helper.scss";
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+    font-size: 0;
+    font-family: $app-font;
+    cursor: default;
+    @include user-select(none);
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+/* to disable 300ms delay */
+/* see e.g. A&P 512290 */
+.breaseWidget {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+body > div {
+    font-size: 12px;
+}
+
+// A&P 529385: position:absolute - nested elements cannot overlap
+// A&P 550410: z-index:0 - elements in DOM after appContainer can overlap without z-index
+#appContainer {
+    display: inline-block;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+
+/* Styled scrollbars */
+
+.iScrollHorizontalScrollbar {
+    position: absolute;
+    z-index: 9999;
+    height: 7px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.iScrollHorizontalScrollbar.iScrollBothScrollbars {
+    right: 8px;
+}
+
+.iScrollVerticalScrollbar {
+    position: absolute;
+    z-index: 9999;
+    width: 7px;
+    bottom: 1px;
+    top: 1px;
+    right: 1px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.iScrollVerticalScrollbar.iScrollBothScrollbars {
+    bottom: 8px;
+}
+
+.iScrollIndicator {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.iScrollHorizontalScrollbar .iScrollIndicator {
+    height: 100%;
+}
+
+.iScrollVerticalScrollbar .iScrollIndicator {
+    width: 100%;
+}

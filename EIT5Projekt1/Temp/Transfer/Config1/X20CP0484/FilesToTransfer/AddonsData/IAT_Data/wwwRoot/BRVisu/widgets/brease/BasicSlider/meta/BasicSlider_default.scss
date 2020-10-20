@@ -1,0 +1,78 @@
+@import "mixins.scss";
+@mixin widgets_brease_BasicSlider_base {
+	@include elemWidth(250);
+	@include elemHeight(100);
+	border-width: 0px;
+	@include border-radius(0px);
+	border-style: solid;
+&:not(.disabled) {
+	background-color: transparent;
+}
+&:not(.disabled) {
+	background-image: none;
+}
+.borderElement .backgroundElement .thumbBackground:not(.disabled) {
+	background-color: #FF8800;
+}
+.borderElement .thumbBackground:not(.disabled) {
+	background-image: none;
+}
+	border-color: #C8C8C8;
+	opacity: 1;
+.borderElement .backgroundElement .rectangleBackground:not(.disabled) {
+	background-color: #C8C8C8;
+}
+.borderElement .rectangleBackground:not(.disabled) {
+	background-image: none;
+}
+	padding: 10px;
+	margin: 0px;
+	@include box-shadow(none);
+.borderElement .axisElement .axis-before .tick text {
+	font-size: 10px;
+}
+.borderElement .axisElement .axis-after .tick text {
+	font-size: 10px;
+}
+.borderElement .valueDisplay .valueOutput {
+	font-size: 10px;
+}
+.borderElement .valueDisplay .unitOutput {
+	font-size: 10px;
+}
+.borderElement .axisElement .axis-before .tick text {
+	font-family: Arial;
+}
+.borderElement .axisElement .axis-after .tick text {
+	font-family: Arial;
+}
+.borderElement .valueDisplay .valueOutput {
+	font-family: Arial;
+}
+.borderElement .valueDisplay .unitOutput {
+	font-family: Arial;
+}
+&.disabled .borderElement .backgroundElement .thumbBackground {
+	background-color: #F1F1F1;
+}
+&.disabled .borderElement .backgroundElement .rectangleBackground {
+	background-color: #EAEAEA;
+}
+&.disabled .borderElement .backgroundElement .thumbBackground {
+	background-image: none;
+}
+&.disabled .borderElement .backgroundElement .rectangleBackground {
+	background-image: none;
+}
+&.disabled {
+	background-color: transparent;
+}
+&.disabled  {
+	background-image: none;
+}
+
+}
+
+.widgets_brease_BasicSlider_style_default {
+@include widgets_brease_BasicSlider_base 
+}

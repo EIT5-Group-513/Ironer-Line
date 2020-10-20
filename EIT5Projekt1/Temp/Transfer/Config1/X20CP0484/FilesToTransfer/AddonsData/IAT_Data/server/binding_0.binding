@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingDefinition xmlns="http://www.br-automation.com/iat2014/binding/runtime/v1">
+  <Content id="content_0">
+    <Binding mode="twoWay">
+      <Source xsi:type="opcUa" refId="::AsGlobalPV:Inverter.Set_RPM" attribute="value" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Target xsi:type="brease" refId="content_0_BasicSlider1" attribute="value" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </Binding>
+    <Binding mode="oneWay">
+      <Source xsi:type="opcUa" refId="::AsGlobalPV:Inverter.Set_RPM" attribute="editable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Target xsi:type="brease" refId="content_0_BasicSlider1" attribute="editable::value" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </Binding>
+  </Content>
+</BindingDefinition>

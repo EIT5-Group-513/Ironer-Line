@@ -1,0 +1,16 @@
+{
+  "name": "build",
+  "version": "1.2.0",
+  "description": "Brease Build",
+  "license": "BundR",
+    "devDependencies": {
+        "a.require": "0.0.1",
+        "grunt": "1.0.0",
+        "grunt-cli": "0.1.13",
+        "grunt-contrib-concat": "0.3.0",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-requirejs": "1.0.0",
+        "grunt-csso": "^2.1.0",
+        "grunt-sass": "^1.2.0"
+    }
+}

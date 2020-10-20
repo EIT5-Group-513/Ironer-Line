@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="4" ArVersion="F4.44">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="Inverter">
+          <Variable Name="CTRL_Word" />
+          <Variable Name="Set_RPM" />
+          <Variable Name="Actual_CTRL_Word" />
+          <Variable Name="RPM_After_Ramp" />
+          <Variable Name="Error_Code" />
+          <Variable Name="DC" />
+          <Variable Name="Voltage" />
+          <Variable Name="Current" />
+          <Variable Name="Actual_Out_fq" />
+          <Variable Name="Actual_RMP" />
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

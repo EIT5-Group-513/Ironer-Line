@@ -1,0 +1,146 @@
+@import '../../../../css/libs/mixins.scss';
+
+$disabled-thumb-color: #F1F1F1;
+$disabled-bg-color: transparent;
+$disabled-track-color:#EAEAEA;
+
+.breaseBasicSlider {
+    position: absolute;
+    overflow: hidden;
+
+    .borderElement {
+        position: absolute;
+        overflow: visible;
+
+        .sliderElement {
+            position: absolute;
+            overflow: visible;
+
+            .sliderRectangle {
+                fill: transparent;
+            }
+
+            .sliderThumb {
+                fill: transparent;
+            }
+        }
+
+        .axisElement {
+            position: absolute;
+            overflow: visible;
+            width: inherit;
+            height: inherit;
+
+            .axis-before, .axis-after {
+                path, line {
+                    fill: none;
+                    stroke: black;
+                    shape-rendering: crispEdges;
+                }
+
+                text {
+                    font-size: 10px;
+                    display: block;
+                    text-anchor: middle;
+                }
+
+                .domain {
+                    display: none !important;
+                }
+            }
+        }
+
+        .backgroundElement {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+
+            .thumbBackground {
+                position: absolute;
+                background-color: #FF8800;
+                border-radius: 50%;
+                
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .rectangleBackground {
+                background-color: #C8C8C8;
+                position: absolute;
+                border-radius: 10px 10px 10px 10px;
+            }
+        }
+    }
+
+    output {
+        @include displayFlexBox(true);
+        @include flex-direction(column);
+        @include align-items(center);
+        @include flex-wrap(nowrap);
+        @include justify-content(center);
+        @include box-sizing(border-box);
+        z-index: 5;
+        position: absolute;
+        background-color: #F1F1F1;
+        text-align: center;
+        color: #333;
+        border-radius: 5px;
+
+        span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+    }
+
+    &.horizontal {
+
+        output {
+
+            &:after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 6px solid #F1F1F1;
+                position: absolute;
+                bottom: -6px;
+                left: 50%;
+                margin-left: -5px;
+            }
+        }
+    }
+
+    &.vertical {
+
+        output {
+
+            &:after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-bottom: 5px solid transparent;
+                border-top: 5px solid transparent;
+                border-left: 6px solid #F1F1F1;
+                position: absolute;
+                bottom: 50%;
+                right: -5px;
+                margin-bottom: -5px;
+            }
+        }
+    }
+
+	&.disabled {
+        background-color: $disabled-bg-color;        
+
+        .borderElement .backgroundElement .thumbBackground {
+            background-color: $disabled-thumb-color;
+        }
+		.borderElement .backgroundElement .rectangleBackground{
+			background-color: $disabled-track-color;
+		}
+    }
+}
