@@ -23,41 +23,44 @@
     <Connection Connector="SS1" TargetModule="X20TB12g" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11f" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
-    <Parameter ID="ChannelType01" Value="4 to 20mA" />
-    <Parameter ID="ChannelType02" Value="4 to 20mA" />
-    <Parameter ID="ChannelType03" Value="4 to 20mA" />
   </Module>
   <Module Name="X20AI4622-2" Type="X20AI4622" Version="1.0.5.0">
     <Connection Connector="SS1" TargetModule="X20TB12h" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11g" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
-    <Parameter ID="ChannelType01" Value="4 to 20mA" />
-    <Parameter ID="ChannelType02" Value="4 to 20mA" />
-    <Parameter ID="ChannelType03" Value="4 to 20mA" />
   </Module>
   <Module Name="X20AT4222-1" Type="X20AT4222" Version="1.2.2.0">
     <Connection Connector="SS1" TargetModule="X20TB12a" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="SensorType02" Value="off" />
+    <Parameter ID="SensorType03" Value="off" />
+    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20AT4222-2" Type="X20AT4222" Version="1.2.2.0">
     <Connection Connector="SS1" TargetModule="X20TB12b" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11a" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="SensorType03" Value="off" />
+    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20AT4222-3" Type="X20AT4222" Version="1.2.2.0">
     <Connection Connector="SS1" TargetModule="X20TB12c" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11b" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="SensorType03" Value="off" />
+    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20AT4222-4" Type="X20AT4222" Version="1.2.2.0">
     <Connection Connector="SS1" TargetModule="X20TB12d" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11c" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="SensorType03" Value="off" />
+    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20BB52" Type="X20BB52" Version="1.1.0.0" />
   <Module Name="X20BM11" Type="X20BM11" Version="1.0.0.1">

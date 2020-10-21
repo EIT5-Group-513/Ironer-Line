@@ -1,9 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BindingsSet id="binding_0" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Bindings>
-  <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:Inverter.Set_RPM" attribute="value" />
-<Target xsi:type="brease" contentRefId="content_0" widgetRefId="BasicSlider1" attribute="value" />
+	<Bindings>
+	
+		
+		
+	
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:heater" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Green" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:heater" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Heater_status" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:T_tank" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_tank_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde1_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde1_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde2_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde2_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde3_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde3_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.voltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Voltage" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.freq" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Freq" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.RPM_actual" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="RPM" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.RPM_set" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Inverter_CTRL_Input1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.CTRL_set" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Inverter_CTRL_Input" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.current" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Current" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.DC" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="DC" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:heater" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Heater_input" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

@@ -8,7 +8,39 @@
   </Aliases>
   <DefaultView>
     <Module Name="&lt;Default&gt;">
-      <GlobalVariables Name="Global Variables" />
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="inverter">
+          <Variable Name="CTRL_set" />
+          <Variable Name="CTRL_actual" />
+          <Variable Name="RPM_set" />
+          <Variable Name="RPM_actual" />
+          <Variable Name="RPM_after_ramp" />
+          <Variable Name="error_code" />
+          <Variable Name="freq" />
+          <Variable Name="voltage" />
+          <Variable Name="current" />
+          <Variable Name="DC" />
+        </Variable>
+        <Variable Name="heater" />
+        <Variable Name="mulde_1">
+          <Variable Name="T_out" />
+          <Variable Name="T_in" />
+        </Variable>
+        <Variable Name="mulde_2">
+          <Variable Name="T_out" />
+          <Variable Name="T_in" />
+        </Variable>
+        <Variable Name="mulde_3">
+          <Variable Name="T_out" />
+          <Variable Name="T_in" />
+        </Variable>
+        <Variable Name="p_last" />
+        <Variable Name="p_pumpe">
+          <Variable Name="after" />
+          <Variable Name="before" />
+        </Variable>
+        <Variable Name="T_tank" />
+      </GlobalVariables>
     </Module>
   </DefaultView>
 </OpcUaSource>

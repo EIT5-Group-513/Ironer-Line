@@ -33,6 +33,6 @@
     <Theme refId=""/>
   </Themes>-->
   <Configurations>
-    <Configuration key="activityCount" value="false" />
-  </Configurations>
+		<Configuration key="activityCount" value="false" />
+	</Configurations>
 </vdef:Visualization>
