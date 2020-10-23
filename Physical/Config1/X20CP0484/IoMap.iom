@@ -17,4 +17,5 @@ VAR_CONFIG
 	::mulde_2.T_in AT %IW."X20AT4222-3".Temperature01;
 	::mulde_1.T_out AT %IW."X20AT4222-2".Temperature02;
 	::heater AT %QX."X20DO9322".DigitalOutput01;
+	::T_ambient AT %IW."X20AT4222-1".Temperature04;
 END_VAR

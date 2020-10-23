@@ -36,7 +36,6 @@
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SensorType02" Value="off" />
     <Parameter ID="SensorType03" Value="off" />
-    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20AT4222-2" Type="X20AT4222" Version="1.2.2.0">
     <Connection Connector="SS1" TargetModule="X20TB12b" TargetConnector="SS" />
@@ -114,6 +113,9 @@
     <Parameter ID="Cyclic7Tolerance" Value="1000000" />
     <Parameter ID="Cyclic8Duration" Value="10000" />
     <Parameter ID="Cyclic8Tolerance" Value="30000000" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="HD" />
+    <Parameter ID="FileDevicePath1" Value="C:\Temp\" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>

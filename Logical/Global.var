@@ -1,4 +1,5 @@
 VAR
+	T_ambient : INT;
 	mulde_3 : mulde_type;
 	mulde_2 : mulde_type;
 	mulde_1 : mulde_type;
