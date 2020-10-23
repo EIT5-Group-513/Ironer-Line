@@ -7,7 +7,7 @@ PROGRAM _CYCLIC
 		<row>
 			<empty/>
 			<empty/>
-			<functionblock position="header" name="zzMpDataRecorder00000000" type="MpDataRecorder"/>
+			<functionblock position="header" name="DataRecorder" type="MpDataRecorder"/>
 			<empty/>
 		</row>
 		<row>
@@ -75,7 +75,7 @@ PROGRAM _CYCLIC
 		<row>
 			<empty/>
 			<empty/>
-			<functionblock position="header" name="zzMpDataRegPar00000000" type="MpDataRegPar"/>
+			<functionblock position="header" name="DataRegPar" type="MpDataRegPar"/>
 			<empty/>
 		</row>
 		<row>
@@ -123,5 +123,6 @@ PROGRAM _CYCLIC
 	</network>
 </networks>
 END_PROGRAM
+
 
 

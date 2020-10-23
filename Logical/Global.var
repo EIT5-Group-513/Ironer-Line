@@ -1,4 +1,5 @@
 VAR
+	DataRecorder : MpDataRecorder;
 	T_ambient : INT;
 	mulde_3 : mulde_type;
 	mulde_2 : mulde_type;
@@ -8,4 +9,5 @@ VAR
 	T_tank : INT;
 	heater : BOOL;
 	p_last : USINT;
+	DataRegPar : MpDataRegPar;
 END_VAR

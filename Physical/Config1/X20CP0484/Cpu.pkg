@@ -20,7 +20,7 @@
     <AutomationRuntime Version="F4.44" />
     <Build GccVersion="4.1.2" />
     <DefaultTargetMemory Tasks="UserROM" />
-    <Transfer AdditionalUserDir="" AddToUserPart="false" AllowInitialTransfer="false" AllowPartitioning="false" ExecuteInitExitProgram="true" ForceInitialTransfer="false" IdentificationTypeValue="" IgnoreVersion="true" KeepNonVolatileMemory="false" ModuleSystemForPip="" PreserveVariableValues="false" ProjectConsistent="true" RebootDuringTransfer="false" TargetIdentificationType="Always" TryToBootInRunMode="false" UserFilesIgnoreDifference="false" />
+    <Transfer AdditionalUserDir="" AddToUserPart="false" AllowInitialTransfer="false" AllowPartitioning="false" ExecuteInitExitProgram="true" ForceInitialTransfer="true" IdentificationTypeValue="" IgnoreVersion="true" KeepNonVolatileMemory="false" ModuleSystemForPip="" PreserveVariableValues="false" ProjectConsistent="false" RebootDuringTransfer="false" TargetIdentificationType="Always" TryToBootInRunMode="false" UserFilesIgnoreDifference="false" />
     <Vc FirmwareVersion="V4.44.0" />
   </Configuration>
 </Cpu>

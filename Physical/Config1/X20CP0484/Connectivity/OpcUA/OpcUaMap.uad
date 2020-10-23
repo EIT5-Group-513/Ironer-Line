@@ -40,7 +40,12 @@
           <Variable Name="before" />
         </Variable>
         <Variable Name="T_tank" />
+        <Variable Name="DataRecorder" />
+        <Variable Name="DataRegPar" />
+        <Variable Name="gDataRecorder" />
+        <Variable Name="T_ambient" />
       </GlobalVariables>
+      <Task Name="Data_log_p" />
     </Module>
   </DefaultView>
 </OpcUaSource>
