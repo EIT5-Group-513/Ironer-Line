@@ -61,6 +61,7 @@ extern "C"
  #define INIT_REASON_WARMSTART 1
  #define brSYSCONF_SET_VOLATILE 0
  #define brERR_INVALID_PARAMETER 27251U
+ #define brERR_NON_CYCLIC_CONTEXT 27252U
  #define brSYSCONF_SET_NON_VOLATILE 1
 #else
  #ifndef _GLOBAL_CONST
@@ -110,6 +111,7 @@ extern "C"
  _GLOBAL_CONST signed char INIT_REASON_WARMSTART;
  _GLOBAL_CONST plcbit brSYSCONF_SET_VOLATILE;
  _GLOBAL_CONST unsigned short brERR_INVALID_PARAMETER;
+ _GLOBAL_CONST unsigned short brERR_NON_CYCLIC_CONTEXT;
  _GLOBAL_CONST plcbit brSYSCONF_SET_NON_VOLATILE;
 #endif
 
@@ -303,6 +305,17 @@ typedef struct ARwinWindowsInfo
 	plcbit enable;
 } ARwinWindowsInfo_typ;
 
+typedef struct ARwinEthWinInfo
+{
+	/* VAR_OUTPUT (analog) */
+	unsigned short status;
+	plcstring IPAddr[16];
+	plcstring SubnetMask[16];
+	plcbyte MacAddr[6];
+	/* VAR_INPUT (digital) */
+	plcbit enable;
+} ARwinEthWinInfo_typ;
+
 
 
 /* Prototyping of functions and function blocks */
@@ -321,6 +334,7 @@ _BUR_PUBLIC void PMemGet(struct PMemGet* inst);
 _BUR_PUBLIC void PMemPut(struct PMemPut* inst);
 _BUR_PUBLIC void PMemSize(struct PMemSize* inst);
 _BUR_PUBLIC void ARwinWindowsInfo(struct ARwinWindowsInfo* inst);
+_BUR_PUBLIC void ARwinEthWinInfo(struct ARwinEthWinInfo* inst);
 
 
 #ifdef __cplusplus

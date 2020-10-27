@@ -3,7 +3,7 @@
   <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
     <note>Do not change anything in this file, else the tmx-file will not be recognized as a valid system text anymore</note>
     <prop type="x-BR-TS:Namespace">BR/EventLog</prop>
-    <prop type="x-BR-TS:systemtextsig">hS8QPqPldwA1+IjthVAhUF1bglLy5ifcQS/48qzjOA6Ve0+R/9uNs5fW2jwkWzJxEygSA/u9lfnbrKs+tSYag1HE5MGwOv/c7Cp8Tmvt9lT16PRZwfgXpeWufv4SOwEdiXnl+d4BzOl/OX/vYz3xhUXitY6xeVQiPGunPPvPlqY=</prop>
+    <prop type="x-BR-TS:systemtextsig">Ui5CsCTw4ad4jYKTuJQICTnqDhj06v2PiGVGgC6eE4eSu548nh/mG0f8C8FfIQYAVBd8wXCcyIe321Oqk4dp44P/uGJJSsPfidfJTIKRjo77JrYZwKCM+3sMiBiEPOeLeD8KsRho3aLMC0PVC/jq3gr6QtNJjwbxYkLWPNhRErg=</prop>
   </header>
   <body>
     <tu tuid="-1064239099">
@@ -36,6 +36,30 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>{1}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="1083180039">
+      <tuv xml:lang="de">
+        <seg>Verwendete mapp Services Version: {1}.{2}.{3}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Used mapp Services version: {1}.{2}.{3}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="1083180047">
+      <tuv xml:lang="de">
+        <seg>Verwendete mapp Technology (legacy) Version: {1}.{2}.{3}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Used mapp Technology (legacy) version: {1}.{2}.{3}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="1083180048">
+      <tuv xml:lang="de">
+        <seg>Verwendete mapp Control Version: {1}.{2}.{3}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Used mapp Control version: {1}.{2}.{3}</seg>
       </tuv>
     </tu>
     <tu tuid="-1064303639">
@@ -168,10 +192,10 @@
     </tu>
     <tu tuid="-1064303136">
       <tuv xml:lang="de">
-        <seg>Registrierung ({2}) ungültig oder existiert nicht </seg>
+        <seg>Komponente ({2}) ungültig oder existiert nicht </seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Registry ({2}) not valid or not existing</seg>
+        <seg>Component ({2}) not valid or not existing</seg>
       </tuv>
     </tu>
     <tu tuid="-1064303133">
@@ -190,6 +214,14 @@
         <seg>Error during system-element linking (ErrorCause: {1})</seg>
       </tuv>
     </tu>
+    <tu tuid="-1064303116">
+      <tuv xml:lang="de">
+        <seg>Der Konfigurations-Wert {2} wurde nicht gefunden</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The configuration-property {2} was not found.</seg>
+      </tuv>
+    </tu>
     <tu tuid="-1064303115">
       <tuv xml:lang="de">
         <seg>In der Konfiguration {2} fehlt der Eintrag {3}</seg>
@@ -204,6 +236,14 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>The configuration data ({2} : {3}) contains entries with invalid format</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303107">
+      <tuv xml:lang="de">
+        <seg>Der Selektor {2} konnte nicht auf {3} gesetzt werden</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The selector {2} could not be set to {3}</seg>
       </tuv>
     </tu>
     <tu tuid="-1064303098">
@@ -328,23 +368,23 @@
     </tu>
     <tu tuid="-1064303082">
       <tuv xml:lang="de">
-        <seg>Kein Zugriff auf OPC-Server (Sucht: {2}, Fehlerursache: {1})</seg>
+        <seg>Kein Zugriff auf OPC-Server (Sucht: {2}, OPC-Fehercode: {3})</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Cannot access OPC-Server (Looking for: {2}, ErrorCause: {1})</seg>
+        <seg>Cannot access OPC-Server (Looking for: {2}, OPC-Errorcode: {3})</seg>
       </tuv>
     </tu>
     <tu tuid="-1064303081">
       <tuv xml:lang="de">
-        <seg>Keine "EngineerinUnit" für {2} konfiguriert (Fehlerursache: {1})</seg>
+        <seg>Keine "EngineeringUnit" für {2} konfiguriert (OPC-Fehlercode: {3})</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>No EngineerinUnit for configured for {2} (ErrorCause: {1})</seg>
+        <seg>No EngineeringUnit configured for {2} (OPC-Errorcode: {3})</seg>
       </tuv>
     </tu>
     <tu tuid="-1064303070">
       <tuv xml:lang="de">
-        <seg>Ungütliger Bezeichner {2} für Einheiten-System</seg>
+        <seg>Ungültiger Bezeichner {2} für Einheiten-System</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Invalid measurement-system identifier {2}</seg>
@@ -360,10 +400,10 @@
     </tu>
     <tu tuid="-1064303068">
       <tuv xml:lang="de">
-        <seg>Unbekannte Einheitne-Gruppe: {2}</seg>
+        <seg>Unbekannte Einheiten-Gruppe: {2}</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Unkonwn Unitg-grop {2}</seg>
+        <seg>Unknown Unit-group {2}</seg>
       </tuv>
     </tu>
     <tu tuid="-1064303067">
@@ -372,6 +412,166 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Invalid Pv {2} for unit-group</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239103">
+      <tuv xml:lang="de">
+        <seg>Komponente konnte nicht erzeugt werden</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Could not create component</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303616">
+      <tuv xml:lang="de">
+        <seg>Es wurde keine PV mit dem angegebenen Namen gefunden.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No PV with the requested name was found.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303615">
+      <tuv xml:lang="de">
+        <seg>Die gewünschte Referenz ist NULL.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The requested reference is NULL.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303614">
+      <tuv xml:lang="de">
+        <seg>Ungültige Konfiguration der Query {2} (in {3})</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Invalid configuration of query {2} (in {3})</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303613">
+      <tuv xml:lang="de">
+        <seg>Konfiguration einer WHERE-Bedingung (#{2}) ungültig</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Configuration of a WHERE-condition (#{2}) invalid</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303612">
+      <tuv xml:lang="de">
+        <seg>Konfiguration einer SELECT-Anweisung (#{2}) ungültig</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Configuration of a SELECT-command (#{2}) invalid</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303611">
+      <tuv xml:lang="de">
+        <seg>Konfiguration der WHERE-Logik ungültig</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Configuration of WHERE-logic invalid</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303610">
+      <tuv xml:lang="de">
+        <seg>Ungültige Query-Update PV {2}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Invalid query-update-pV {2}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239102">
+      <tuv xml:lang="de">
+        <seg>MpLink ist ein Null-Zeiger</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MpLink is a null pointer</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239101">
+      <tuv xml:lang="de">
+        <seg>MpLink-Verbindung nicht erlaubt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MpLink connection not allowed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239100">
+      <tuv xml:lang="de">
+        <seg>MpLink wurde geändert</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MpLink modified</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239098">
+      <tuv xml:lang="de">
+        <seg>MpLink wird bereits verwendet</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MpLink already in use</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239097">
+      <tuv xml:lang="de">
+        <seg>Parameters-Struktur ist ein Null-Zeiger</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Parameters structure is a null pointer</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239096">
+      <tuv xml:lang="de">
+        <seg>Configuration-Struktur ist ein Null-Zeiger</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Configuration structure is a null pointer</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239095">
+      <tuv xml:lang="de">
+        <seg>Configuration-Zeiger ist keine gültige PV</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Configuration pointer is no valid PV</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064239091">
+      <tuv xml:lang="de">
+        <seg>Konfiguration ist ungültig</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Configuration is invalid</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-2137980917">
+      <tuv xml:lang="de">
+        <seg>Warnung beim Laden der Konfiguration</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Warning loading configuration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-2138045423">
+      <tuv xml:lang="de">
+        <seg>Eingegebener Taskname "{2}" ist zu lang und wurde gekürzt: "{3}"</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Entered task name "{2}" is too long and was truncated: "{3}"</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303598">
+      <tuv xml:lang="de">
+        <seg>Fehler beim Lesen des Passworts ({2}) aus der Konfiguration (Interner Fehler: {1})</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error reading password ({2}) from configuration (Internal Error: {1})</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-1064303597">
+      <tuv xml:lang="de">
+        <seg>Passwort ist ungültig</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Password is invalid</seg>
       </tuv>
     </tu>
   </body>

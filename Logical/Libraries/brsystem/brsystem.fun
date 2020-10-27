@@ -193,3 +193,15 @@ END_FUNCTION_BLOCK
 		windowsStatus	:UDINT;		(*windows system status: brWINDOWS_BLUESCREEN, brWINDOWS_OK*)
 	END_VAR
 END_FUNCTION_BLOCK
+
+{REDUND_ERROR} FUNCTION_BLOCK ARwinEthWinInfo				(*get ETH info windows interface*)
+	VAR_INPUT
+		enable	:BOOL;				(*enables execution*)
+	END_VAR
+	VAR_OUTPUT
+		status	:UINT;				(*execution status: ERR_OK, 0xXXXX = see help*)
+		IPAddr	:STRING[15];		(*IP-address of virtual windows IF*)
+		SubnetMask	:STRING[15];	(*netmask of virtual windows IF*)
+		MacAddr	:ARRAY[0..5] OF BYTE;	(*MAC-address of virtual windows IF*)
+	END_VAR
+END_FUNCTION_BLOCK

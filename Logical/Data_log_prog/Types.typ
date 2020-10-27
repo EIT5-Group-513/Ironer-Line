@@ -1,0 +1,7 @@
+
+TYPE
+	STATE_ENUM : 
+		(
+		STATE_RECORDING := 0
+		);
+END_TYPE

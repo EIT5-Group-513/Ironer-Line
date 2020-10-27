@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.4.4.112?>
+<?AutomationStudio Version=4.7.2.98?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="8I66xxxxxxx.0P-xxx" Type="8I66xxxxxxx.0P-xxx" Version="2.3.0.0">
     <Connection Connector="PLK1" TargetModule="X20CP0484" TargetConnector="IF3">
@@ -96,6 +96,7 @@
       <Parameter ID="InaNodeNumber" Value="0" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="EIT5Projekt1_Config1" />
+    <Parameter ID="UserPartitionSize" Value="100" />
     <Parameter ID="TimerDeviceType" Value="SWIOTIMER" />
     <Parameter ID="Cyclic1Duration" Value="10000" />
     <Parameter ID="Cyclic1Tolerance" Value="10000" />
@@ -114,8 +115,17 @@
     <Parameter ID="Cyclic8Duration" Value="10000" />
     <Parameter ID="Cyclic8Tolerance" Value="30000000" />
     <Group ID="FileDevice1" />
-    <Parameter ID="FileDeviceName1" Value="HD" />
-    <Parameter ID="FileDevicePath1" Value="C:\Temp\" />
+    <Parameter ID="FileDeviceName1" Value="PLC_user" />
+    <Parameter ID="FileDevicePath1" Value="F:\" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="PC_temp" />
+    <Parameter ID="FileDevicePath2" Value="C:\temp\" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="admin" />
+    <Parameter ID="FtpUserPassword1" Value="cwHDI+xQYJGOTM1OUrZCZFPwGlAu3H/MLCABeDPRdiI=" Description="password=admin" />
+    <Parameter ID="FtpUserSalt1" Value="YD4DOUwF" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="FTPdevice1" Value="ALL" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>

@@ -46,6 +46,7 @@ TYPE
 		Status : MpDataUIStatusEnum; (*Current status of MpDataTableUI*)
 		AutoRefresh : BOOL := TRUE; (*Setting: If TRUE, values in Items array will automatically be refreshed when there are newer values in MpDataRecorder internal buffer*)
 		Refresh : BOOL := FALSE; (*Command: Trigger refresh now*)
+		Language : STRING[20] := ''; (*Language and unit system setting*)
 	END_STRUCT;
 	MpDataTableUIPVItemType : 	STRUCT 
 		Name : STRING[100]; (*Name of the variable*)
@@ -97,6 +98,7 @@ TYPE
 	MpDataStatisticsUIConnectType : 	STRUCT 
 		Table : MpDataStatisticsUITableType; (*Statistical data of registered PVs*)
 		Status : MpDataUIStatusEnum; (*Current status of MpDataTableUI*)
+		Language : STRING[20] := ''; (*Language and unit system setting*)
 	END_STRUCT;
 	MpDataStatisticsUITableType : 	STRUCT 
 		Data : ARRAY[0..19]OF MpDataStatisticsUIPVItemType; (*Statistics table view*)
@@ -198,6 +200,22 @@ TYPE
 		AllowEdit : BOOL;
 		Header : MpDataConfigHeaderType;
 	END_STRUCT;
+	MpDataUnitDefinitionTypeEnum : 
+		(
+		mpDATA_UNIT_DEF_TYPE_REGISTR := 0, (*Units are based on the parameters of registration function blocks*)
+		mpDATA_UNIT_DEF_TYPE_MEASSYS := 1 (*Units are based on the Automation Studio unit system*)
+		);
+	MpDataUnitDisplayTypeEnum : 
+		(
+		mpDATA_UNIT_DISPLAY_NONE := 0, (*No units will be displayed*)
+		mpDATA_UNIT_DISPLAY_ABBREV := 1, (*Abbreviated unit text will be displayed as defined in unit system*)
+		mpDATA_UNIT_DISPLAY_FULL := 2 (*Full unit text will be displayed as defined in unit system*)
+		);
+	MpDataUnitDefinitionType : 	STRUCT  (*Unit definition configuration*)
+		Type : MpDataUnitDefinitionTypeEnum := mpDATA_UNIT_DEF_TYPE_REGISTR; (*Unit definition type*)
+		UnitDisplay : MpDataUnitDisplayTypeEnum := mpDATA_UNIT_DISPLAY_ABBREV; (*Unit display definition*)
+		MeasurementSystem : STRING[20]; (*Measurement system, e.g. Metric, Imperial, Custom1, ...*)
+	END_STRUCT;
 	MpDataRecorderConfigType : 	STRUCT  (*MpDataRecorder configuration*)
 		MaxNumberOfFiles : UINT := 1; (*This value defines the number of .csv files that are generated after a "Record" command. The "RecordDone" output is set to TRUE when the files have been created*)
 		MaxFileSize : UDINT := 1000; (*Defines the size of a file [kB]*)
@@ -213,5 +231,6 @@ TYPE
 		OverwriteOldestFile : BOOL := FALSE; (*When MaxNumberOfFiles is reached, oldest files will be overwritten without stopping the recording*)
 		SaveInitialValues : BOOL := FALSE; (*Parameter allows to log a sample of registered PVs immediately upon the Recorrd pin. Afterwards values are logged based on RecordMode*)
 		Format : MpDataFormatType;
+		UnitDefinition : MpDataUnitDefinitionType;
 	END_STRUCT;
 END_TYPE

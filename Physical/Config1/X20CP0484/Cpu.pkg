@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.4.4.112?>
+<?AutomationStudio Version=4.7.2.98?>
 <Cpu xmlns="http://br-automation.co.at/AS/Cpu">
   <Objects>
     <Object Type="File" Description="Software configuration">Cpu.sw</Object>
@@ -17,10 +17,11 @@
     <Object Type="Package">mappCockpit</Object>
   </Objects>
   <Configuration ModuleId="X20CP0484">
-    <AutomationRuntime Version="F4.44" />
+    <AutomationRuntime Version="B4.73" />
     <Build GccVersion="4.1.2" />
     <DefaultTargetMemory Tasks="UserROM" />
-    <Transfer AdditionalUserDir="" AddToUserPart="false" AllowInitialTransfer="false" AllowPartitioning="false" ExecuteInitExitProgram="true" ForceInitialTransfer="true" IdentificationTypeValue="" IgnoreVersion="true" KeepNonVolatileMemory="false" ModuleSystemForPip="" PreserveVariableValues="false" ProjectConsistent="false" RebootDuringTransfer="false" TargetIdentificationType="Always" TryToBootInRunMode="false" UserFilesIgnoreDifference="false" />
+    <Safety SafetyRelease="0.0" />
+    <Transfer AddToUserPart="False" AdditionalUserDir="" AllowInitialTransfer="False" AllowPartitioning="False" ExecuteInitExitProgram="True" ForceInitialTransfer="False" IdentificationTypeValue="" IgnoreVersion="True" KeepNonVolatileMemory="False" ModuleSystemForPip="" PreserveVariableValues="False" ProjectConsistent="True" RebootDuringTransfer="False" TargetIdentificationType="Always" TryToBootInRunMode="False" UserFilesIgnoreDifference="False" />
     <Vc FirmwareVersion="V4.44.0" />
   </Configuration>
 </Cpu>

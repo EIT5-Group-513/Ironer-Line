@@ -1,0 +1,5 @@
+VAR
+	DataRecorder : MpDataRecorder;
+	DataRegPar : MpDataRegPar;
+	state : USINT;
+END_VAR

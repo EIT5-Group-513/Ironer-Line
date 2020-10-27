@@ -65,7 +65,7 @@ FUNCTION_BLOCK MpDataRegParLimits (*Registers process variables for logging*) (*
 		Active : BOOL; (*Indicates whether the function block is active*) (* *) (*#PAR#;*)
 		Error : BOOL; (*Indicates that the function block is in an error state or a command was not executed correctly*) (* *) (*#PAR#;*)
 		StatusID : DINT; (*Status information about the function block*) (* *) (*#PAR#; *)
-		LimitMonitor : MpDataPVItemLimitEnum; (*Shows whether value is within limits, checked when recording is active*)  (* *) (*#CMD#;*)
+		LimitMonitor : MpDataPVItemLimitEnum; (*Shows whether value is within limits, checked when recording is active. Always shows mpDATA_NO_LIMITS_CONFIGURED for non-primitve datatypes (arrays, structures) *)  (* *) (*#CMD#;*)
 		Info : MpDataInfoType; (*Additional information about the component*) (* *) (*#CMD#;*)
 	END_VAR
 	VAR

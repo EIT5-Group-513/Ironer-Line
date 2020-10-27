@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MpData 5.01.0 */
+/* MpData 5.11.2 */
 
 #ifndef _MPDATA_
 #define _MPDATA_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MpData_VERSION
-#define _MpData_VERSION 5.01.0
+#define _MpData_VERSION 5.11.2
 #endif
 
 #include <bur/plctypes.h>
@@ -119,6 +119,17 @@ typedef enum MpDataFileTypeEnum
 	mpDATA_FILE_TYPE_PDF
 } MpDataFileTypeEnum;
 
+typedef enum MpDataUnitDefinitionTypeEnum
+{	mpDATA_UNIT_DEF_TYPE_REGISTR = 0,
+	mpDATA_UNIT_DEF_TYPE_MEASSYS = 1
+} MpDataUnitDefinitionTypeEnum;
+
+typedef enum MpDataUnitDisplayTypeEnum
+{	mpDATA_UNIT_DISPLAY_NONE = 0,
+	mpDATA_UNIT_DISPLAY_ABBREV = 1,
+	mpDATA_UNIT_DISPLAY_FULL = 2
+} MpDataUnitDisplayTypeEnum;
+
 typedef enum MpDataErrorEnum
 {	mpDATA_NO_ERROR = 0,
 	mpDATA_ERR_ACTIVATION = -1064239103,
@@ -226,6 +237,7 @@ typedef struct MpDataTableUIConnectType
 	enum MpDataUIStatusEnum Status;
 	plcbit AutoRefresh;
 	plcbit Refresh;
+	plcstring Language[21];
 } MpDataTableUIConnectType;
 
 typedef struct MpDataStatisticsUISetupType
@@ -258,6 +270,7 @@ typedef struct MpDataStatisticsUITableType
 typedef struct MpDataStatisticsUIConnectType
 {	struct MpDataStatisticsUITableType Table;
 	enum MpDataUIStatusEnum Status;
+	plcstring Language[21];
 } MpDataStatisticsUIConnectType;
 
 typedef struct MpDataConfigHeaderRowType
@@ -287,6 +300,12 @@ typedef struct MpDataFormatType
 	struct MpDataConfigHeaderType Header;
 } MpDataFormatType;
 
+typedef struct MpDataUnitDefinitionType
+{	enum MpDataUnitDefinitionTypeEnum Type;
+	enum MpDataUnitDisplayTypeEnum UnitDisplay;
+	plcstring MeasurementSystem[21];
+} MpDataUnitDefinitionType;
+
 typedef struct MpDataRecorderConfigType
 {	unsigned short MaxNumberOfFiles;
 	unsigned long MaxFileSize;
@@ -302,6 +321,7 @@ typedef struct MpDataRecorderConfigType
 	plcbit OverwriteOldestFile;
 	plcbit SaveInitialValues;
 	struct MpDataFormatType Format;
+	struct MpDataUnitDefinitionType UnitDefinition;
 } MpDataRecorderConfigType;
 
 typedef struct MpDataRecorder

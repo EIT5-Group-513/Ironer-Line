@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<OpcUaSource FileVersion="4" ArVersion="F4.44">
+<OpcUaSource FileVersion="7" ArVersion="B4.73">
   <Aliases>
     <ACLAliases />
     <EURangeViolationAliases />
@@ -40,9 +40,6 @@
           <Variable Name="before" />
         </Variable>
         <Variable Name="T_tank" />
-        <Variable Name="DataRecorder" />
-        <Variable Name="DataRegPar" />
-        <Variable Name="gDataRecorder" />
         <Variable Name="T_ambient" />
       </GlobalVariables>
       <Task Name="Data_log_p" />

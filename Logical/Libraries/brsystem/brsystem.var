@@ -1,6 +1,7 @@
                                                                       
 VAR CONSTANT
 	brSYSCONF_SET_NON_VOLATILE	: BOOL	:= TRUE;	(*set permanent value*)
+	brERR_NON_CYCLIC_CONTEXT	: UINT	:= 27252;	(*non-cyclic context call*)
 	brERR_INVALID_PARAMETER	: UINT	:= 27251;		(*invalid parameter transferred*)
 	brSYSCONF_SET_VOLATILE	: BOOL	:= FALSE;		(*set non-permanent value*)
 	INIT_REASON_WARMSTART	: SINT	:= 1;			(*warm restart boot information*)
