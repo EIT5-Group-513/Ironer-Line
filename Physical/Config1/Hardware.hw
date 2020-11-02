@@ -23,6 +23,7 @@
     <Connection Connector="SS1" TargetModule="X20TB12g" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11f" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="ChannelType01" Value="4 to 20mA" />
   </Module>
   <Module Name="X20AI4622-2" Type="X20AI4622" Version="1.0.5.0">
     <Connection Connector="SS1" TargetModule="X20TB12h" TargetConnector="SS" />
