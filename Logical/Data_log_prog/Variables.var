@@ -1,5 +1,14 @@
 VAR
 	DataRecorder : MpDataRecorder;
-	DataRegPar : MpDataRegPar;
+	DRP_m3_To : MpDataRegPar;
+	DRP_m3_Ti : MpDataRegPar;
+	DRP_m2_To : MpDataRegPar;
+	DRP_m2_Ti : MpDataRegPar;
+	DRP_m1_To : MpDataRegPar;
+	DRP_m1_Ti : MpDataRegPar;
+	DRP_T_tank : MpDataRegPar;
+	DRP_RPM : MpDataRegPar;
+	DRP_heater : MpDataRegPar;
+	DRP_T_ambient : MpDataRegPar;
 	state : USINT;
 END_VAR

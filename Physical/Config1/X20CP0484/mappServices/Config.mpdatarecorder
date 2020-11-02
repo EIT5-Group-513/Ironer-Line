@@ -1,4 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Configuration>
-  <Element ID="gDataRecorder" Type="mpdatarecorder" />
+  <Element ID="gDataRecorder" Type="mpdatarecorder">
+    <Group ID="DataRecorder">
+      <Property ID="MaxNumberOfFiles" Value="100" />
+      <Property ID="MaxFileSize" Value="51200" />
+    </Group>
+  </Element>
 </Configuration>
