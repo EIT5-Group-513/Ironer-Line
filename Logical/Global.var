@@ -1,4 +1,5 @@
 VAR
+	failState : UINT := 0; (*fail state*)
 	T_ambient : INT;
 	mulde_3 : mulde_type;
 	mulde_2 : mulde_type;
