@@ -5,46 +5,6 @@
 	#include <AsDefault.h>
 #endif
 
-void _INIT ProgramInit(void)
-{
-	heater;
-	inverter;
-	mulde_1;
-	mulde_2;
-	mulde_3;
-	p_last;
-	p_pumpe;
-	T_ambient;
-	T_tank;
-	
-	failState;
-	ocp;
-	hna;
-	tl;
-}
-
-void _CYCLIC ProgramCyclic(void) 
-{
-	
-	// To safely run code, only execute code if failState is 0!!! //
-	
-	failState | checkOverCurrent();
-	failState | checkHeater();
-	failState | checkTemperature();
-	// add more check here //
-
-	if (failstate != 0) {
-		// something is wrong i can feel it
-		// better shut down
-		saveShutdown();
-	}
-	else {
-		// everything is OK
-	}
-	
-}
-
-
 int checkOverCurrent(void) {
 	
 	// over current protection
@@ -104,6 +64,47 @@ void saveShutdown(void) {
 	
 } 
 
+void _INIT ProgramInit(void)
+{
+	heater;
+	inverter;
+	mulde_1;
+	mulde_2;
+	mulde_3;
+	p_last;
+	p_pumpe;
+	T_ambient;
+	T_tank;
+	
+	failState;
+	ocp;
+	hna;
+	tl;
+	
+}
+
+void _CYCLIC ProgramCyclic(void) 
+{
+	
+	// To safely run code, only execute code if failState is 0!!! //
+	
+	failState | checkOverCurrent();
+	failState | checkHeater();
+	failState | checkTemperature();
+	// add more check here //
+
+	if (failState != 0) {
+		// something is wrong i can feel it
+		// better shut down
+		saveShutdown();
+	}
+	else {
+		// everything is OK
+	}
+	
+}
+
+
 
 
 void _EXIT ProgramExit(void)
@@ -113,4 +114,6 @@ void _EXIT ProgramExit(void)
 	
 	
 }
+
+
 

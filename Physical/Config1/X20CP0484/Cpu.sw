@@ -6,6 +6,7 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Failsafe" Source="Failsafe.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <Task Name="Kontroller" Source="Kontroller.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
