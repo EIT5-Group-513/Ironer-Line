@@ -1,0 +1,3 @@
+VAR
+	PWM : PWM_type;
+END_VAR
