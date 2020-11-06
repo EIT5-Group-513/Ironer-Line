@@ -6,6 +6,9 @@ PROGRAM _INIT
 	mulde_1;
 	mulde_2;
 	mulde_3;
+	Flow_1;
+	p_pumpe;
+	p_last;
 	
 	IF DiagCpuIsSimulated() THEN
 		DataRecorder.DeviceName := ADR('PC_temp');

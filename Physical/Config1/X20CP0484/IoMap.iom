@@ -19,4 +19,7 @@ VAR_CONFIG
 	::heater AT %QX."X20DO9322".DigitalOutput01;
 	::T_ambient AT %IW."X20AT4222-1".Temperature04;
 	::Flow_1 AT %IW."X20AI4622-1".AnalogInput01;
+	::p_pumpe.before AT %IW."X20AI4622-2".AnalogInput01;
+	::p_pumpe.after AT %IW."X20AI4622-2".AnalogInput02;
+	::p_last AT %IW."X20AI4622-2".AnalogInput03;
 END_VAR

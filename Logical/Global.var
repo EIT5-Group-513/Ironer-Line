@@ -9,5 +9,5 @@ VAR
 	p_pumpe : p_pumpe_type;
 	T_tank : INT;
 	heater : BOOL;
-	p_last : USINT;
+	p_last : INT;
 END_VAR

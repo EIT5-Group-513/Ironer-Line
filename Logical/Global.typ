@@ -17,7 +17,7 @@ TYPE
 		T_in : INT;
 	END_STRUCT;
 	p_pumpe_type : 	STRUCT 
-		after : USINT;
-		before : USINT;
+		after : INT;
+		before : INT;
 	END_STRUCT;
 END_TYPE

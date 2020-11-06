@@ -73,5 +73,9 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:heater" attribute="value" />
 <Target xsi:type="brease" contentRefId="content_0" widgetRefId="Heater_input" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:T_ambient" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_ambient" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>
