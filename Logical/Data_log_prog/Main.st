@@ -6,7 +6,7 @@ PROGRAM _INIT
 	mulde_1;
 	mulde_2;
 	mulde_3;
-	Flow_1;
+	flow_cooling_water;
 	p_pumpe;
 	p_last;
 	

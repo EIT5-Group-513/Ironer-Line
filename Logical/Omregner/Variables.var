@@ -1,0 +1,6 @@
+VAR
+	p_last_bar : REAL;
+	p_after_pump_bar : REAL;
+	p_before_pump_bar : REAL;
+	flow_cooling_water_mls : REAL;
+END_VAR

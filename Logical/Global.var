@@ -1,5 +1,5 @@
 VAR
-	Flow_1 : INT;
+	flow_cooling_water : INT;
 	failState : UINT := 0;
 	T_ambient : INT;
 	mulde_3 : mulde_type;
