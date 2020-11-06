@@ -57,6 +57,22 @@ int checkTemperature(void) {
 	}
 }
 
+int checkOverPressure(void) {
+	
+	// checks if the pressure is higher then expected anywhere
+	// usually means pipes are block or something
+	
+	opp.P = (p_pumpe.after*10.0)/32767.0; // in Bar
+	
+	if(opp.P > opp.max) {
+		return 0x0008;
+	}
+	else {
+		return 0x0000;
+	}
+	
+}
+
 void saveShutdown(void) {
 	
 	inverter.RPM_set = 0;
@@ -80,6 +96,7 @@ void _INIT ProgramInit(void)
 	ocp;
 	hna;
 	tl;
+	opp;
 	
 }
 
@@ -88,9 +105,10 @@ void _CYCLIC ProgramCyclic(void)
 	
 	// To safely run code, only execute code if failState is 0!!! //
 	
-	failState | checkOverCurrent();
-	failState | checkHeater();
-	failState | checkTemperature();
+	failState = failState | checkOverCurrent();
+	failState = failState | checkHeater();
+	failState = failState | checkTemperature();
+	failState = failState | checkOverPressure();
 	// add more check here //
 
 	if (failState != 0) {
