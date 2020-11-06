@@ -11,4 +11,7 @@ VAR
 	DRP_heater : MpDataRegPar;
 	DRP_T_ambient : MpDataRegPar;
 	state : USINT;
+	DRP_p_pumpe_before : MpDataRegPar;
+	DRP_p_pumpe_after : MpDataRegPar;
+	DRP_p_last : MpDataRegPar;
 END_VAR

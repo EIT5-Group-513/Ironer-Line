@@ -49,6 +49,19 @@ PROGRAM _INIT
 	
 	DRP_m3_To.MpLink := ADR(gDataRecorder);
 	DRP_m3_To.PVName := ADR('mulde_3.T_out');
+	
+	DRP_p_pumpe_before.MpLink := ADR(gDataRecorder);
+	DRP_p_pumpe_before.PVName := ADR('p_pumpe.before');
+	
+	DRP_p_pumpe_after.MpLink := ADR(gDataRecorder);
+	DRP_p_pumpe_after.PVName := ADR('p_pumpe.after');
+	
+	DRP_p_last.MpLink := ADR(gDataRecorder);
+	DRP_p_last.PVName := ADR('p_last');
+	
+	
+	
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -177,6 +190,40 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 			
+			DRP_p_pumpe_before.Enable := TRUE;
+			
+			IF DRP_p_pumpe_before.Active THEN
+				IF DRP_p_pumpe_before.StatusID = 0 THEN
+					DRP_p_pumpe_before.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_p_pumpe_after.Enable := TRUE;
+			
+			IF DRP_p_pumpe_after.Active THEN
+				IF DRP_p_pumpe_after.StatusID = 0 THEN
+					DRP_p_pumpe_after.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_p_last.Enable := TRUE;
+			
+			IF DRP_p_last.Active THEN
+				IF DRP_p_last.StatusID = 0 THEN
+					DRP_p_last.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			
 			// add more regpar in between..
 		20: 
 		
@@ -203,6 +250,9 @@ PROGRAM _CYCLIC
 	DRP_m2_To();
 	DRP_m3_Ti();
 	DRP_m3_To();
+	DRP_p_pumpe_before();
+	DRP_p_pumpe_after();
+	DRP_p_last();
 	
 END_PROGRAM
 
@@ -219,6 +269,9 @@ PROGRAM _EXIT
 	DRP_m2_To(Enable := FALSE);
 	DRP_m3_Ti(Enable := FALSE);
 	DRP_m3_To(Enable := FALSE);
+	DRP_p_pumpe_before(Enable := FALSE);
+	DRP_p_pumpe_after(Enable := FALSE);
+	DRP_p_last(Enable := FALSE);
 	
 END_PROGRAM
 
