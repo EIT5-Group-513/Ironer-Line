@@ -22,4 +22,5 @@ VAR_CONFIG
 	::p_pumpe.before AT %IW."X20AI4622-2".AnalogInput01;
 	::p_pumpe.after AT %IW."X20AI4622-2".AnalogInput02;
 	::p_last AT %IW."X20AI4622-2".AnalogInput03;
+	::mulde_2.T_t_out AT %IW."X20AT4222-3".Temperature03;
 END_VAR

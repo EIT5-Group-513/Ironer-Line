@@ -54,7 +54,6 @@
     <Connection Connector="SL" TargetModule="X20BM11b" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
-    <Parameter ID="SensorType03" Value="off" />
     <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20AT4222-4" Type="X20AT4222" Version="1.2.2.0">

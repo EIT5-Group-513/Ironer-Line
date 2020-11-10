@@ -15,6 +15,7 @@ TYPE
 	mulde_type : 	STRUCT 
 		T_out : INT;
 		T_in : INT;
+		T_t_out : INT;
 	END_STRUCT;
 	p_pumpe_type : 	STRUCT 
 		after : INT;
