@@ -16,4 +16,8 @@ TYPE
 		minRPM : UINT := 500; (*minimum allowed RPM of pump*)
 		timeout : UINT := 2400; (*in seconds times cycline period*)
 	END_STRUCT;
+	op_type : 	STRUCT  (*over pressure protection type*)
+		max : REAL := 1.5; (*maximum pressure allowed in Bar*)
+		P : REAL := 0.0; (*actual pressure (for calculations)*)
+	END_STRUCT;
 END_TYPE

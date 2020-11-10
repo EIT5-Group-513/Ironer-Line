@@ -2,4 +2,5 @@ VAR
 	ocp : oc_type; (*over current protection struct*)
 	hna : hna_type; (*heater not alone struct*)
 	tl : tl_type; (*temperature limit struct*)
+	opp : op_type; (*over pressure protection struct*)
 END_VAR

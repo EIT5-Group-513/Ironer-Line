@@ -34,15 +34,16 @@
           <Variable Name="T_out" />
           <Variable Name="T_in" />
         </Variable>
-        <Variable Name="p_last" />
-        <Variable Name="p_pumpe">
-          <Variable Name="after" />
-          <Variable Name="before" />
-        </Variable>
         <Variable Name="T_tank" />
         <Variable Name="T_ambient" />
       </GlobalVariables>
       <Task Name="Data_log_p" />
+      <Task Name="Omregner">
+        <Variable Name="p_after_pump_bar" />
+        <Variable Name="p_before_pump_bar" />
+        <Variable Name="p_last_bar" />
+        <Variable Name="flow_cooling_water_mls" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

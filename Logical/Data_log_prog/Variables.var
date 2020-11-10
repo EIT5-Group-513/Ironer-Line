@@ -1,4 +1,8 @@
 VAR
+	DRP_inverter_voltage : MpDataRegPar;
+	DRP_inverter_DC : MpDataRegPar;
+	DRP_inverter_current : MpDataRegPar;
+	DRP_inverter_RPM : MpDataRegPar;
 	DataRecorder : MpDataRecorder;
 	DRP_m3_To : MpDataRegPar;
 	DRP_m3_Ti : MpDataRegPar;
@@ -7,8 +11,10 @@ VAR
 	DRP_m1_To : MpDataRegPar;
 	DRP_m1_Ti : MpDataRegPar;
 	DRP_T_tank : MpDataRegPar;
-	DRP_RPM : MpDataRegPar;
 	DRP_heater : MpDataRegPar;
 	DRP_T_ambient : MpDataRegPar;
 	state : USINT;
+	DRP_p_pumpe_before : MpDataRegPar;
+	DRP_p_pumpe_after : MpDataRegPar;
+	DRP_p_last : MpDataRegPar;
 END_VAR

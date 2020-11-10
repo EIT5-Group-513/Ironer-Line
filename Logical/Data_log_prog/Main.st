@@ -6,7 +6,7 @@ PROGRAM _INIT
 	mulde_1;
 	mulde_2;
 	mulde_3;
-	Flow_1;
+	flow_cooling_water;
 	p_pumpe;
 	p_last;
 	
@@ -29,8 +29,8 @@ PROGRAM _INIT
 	DRP_T_tank.MpLink := ADR(gDataRecorder);
 	DRP_T_tank.PVName := ADR('T_tank');
 	
-	DRP_RPM.MpLink := ADR(gDataRecorder);
-	DRP_RPM.PVName := ADR('inverter.RPM_actual');
+	DRP_inverter_RPM.MpLink := ADR(gDataRecorder);
+	DRP_inverter_RPM.PVName := ADR('inverter.RPM_actual');
 	
 	DRP_m1_Ti.MpLink := ADR(gDataRecorder);
 	DRP_m1_Ti.PVName := ADR('mulde_1.T_in');
@@ -49,6 +49,26 @@ PROGRAM _INIT
 	
 	DRP_m3_To.MpLink := ADR(gDataRecorder);
 	DRP_m3_To.PVName := ADR('mulde_3.T_out');
+	
+	DRP_p_pumpe_before.MpLink := ADR(gDataRecorder);
+	DRP_p_pumpe_before.PVName := ADR('p_pumpe.before');
+	
+	DRP_p_pumpe_after.MpLink := ADR(gDataRecorder);
+	DRP_p_pumpe_after.PVName := ADR('p_pumpe.after');
+	
+	DRP_p_last.MpLink := ADR(gDataRecorder);
+	DRP_p_last.PVName := ADR('p_last');
+	
+	DRP_inverter_DC.MpLink := ADR(gDataRecorder);
+	DRP_inverter_DC.PVName := ADR('inverter.DC');
+	
+	DRP_inverter_voltage.MpLink := ADR(gDataRecorder);
+	DRP_inverter_voltage.PVName := ADR('inverter.voltage');
+	
+	DRP_inverter_current.MpLink := ADR(gDataRecorder);
+	DRP_inverter_current.PVName := ADR('inverter.current');
+	
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -89,11 +109,11 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 			
-			DRP_RPM.Enable := TRUE;
+			DRP_inverter_RPM.Enable := TRUE;
 			
-			IF DRP_RPM.Active THEN
-				IF DRP_RPM.StatusID = 0 THEN
-					DRP_RPM.Enable := TRUE;
+			IF DRP_inverter_RPM.Active THEN
+				IF DRP_inverter_RPM.StatusID = 0 THEN
+					DRP_inverter_RPM.Enable := TRUE;
 					state := 20;
 				ELSE
 					state := 200;
@@ -177,6 +197,73 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 			
+			DRP_p_pumpe_before.Enable := TRUE;
+			
+			IF DRP_p_pumpe_before.Active THEN
+				IF DRP_p_pumpe_before.StatusID = 0 THEN
+					DRP_p_pumpe_before.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_p_pumpe_after.Enable := TRUE;
+			
+			IF DRP_p_pumpe_after.Active THEN
+				IF DRP_p_pumpe_after.StatusID = 0 THEN
+					DRP_p_pumpe_after.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_p_last.Enable := TRUE;
+			
+			IF DRP_p_last.Active THEN
+				IF DRP_p_last.StatusID = 0 THEN
+					DRP_p_last.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_inverter_DC.Enable := TRUE;
+			
+			IF DRP_inverter_DC.Active THEN
+				IF DRP_inverter_DC.StatusID = 0 THEN
+					DRP_inverter_DC.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_inverter_voltage.Enable := TRUE;
+			
+			IF DRP_inverter_voltage.Active THEN
+				IF DRP_inverter_voltage.StatusID = 0 THEN
+					DRP_inverter_voltage.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_inverter_current.Enable := TRUE;
+			
+			IF DRP_inverter_current.Active THEN
+				IF DRP_inverter_current.StatusID = 0 THEN
+					DRP_inverter_current.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			
 			// add more regpar in between..
 		20: 
 		
@@ -195,7 +282,7 @@ PROGRAM _CYCLIC
 	DataRecorder();
 	DRP_T_ambient();
 	DRP_heater();
-	DRP_RPM();
+	DRP_inverter_RPM();
 	DRP_T_tank();
 	DRP_m1_Ti();
 	DRP_m1_To();
@@ -203,6 +290,13 @@ PROGRAM _CYCLIC
 	DRP_m2_To();
 	DRP_m3_Ti();
 	DRP_m3_To();
+	DRP_p_pumpe_before();
+	DRP_p_pumpe_after();
+	DRP_p_last();
+	DRP_inverter_DC();
+	DRP_inverter_voltage();
+	DRP_inverter_current();
+	
 	
 END_PROGRAM
 
@@ -211,7 +305,7 @@ PROGRAM _EXIT
 	DataRecorder(Enable := FALSE);
 	DRP_T_ambient(Enable := FALSE);
 	DRP_heater(Enable := FALSE);
-	DRP_RPM(Enable := FALSE);
+	DRP_inverter_RPM(Enable := FALSE);
 	DRP_T_tank(Enable := FALSE);
 	DRP_m1_Ti(Enable := FALSE);
 	DRP_m1_To(Enable := FALSE);
@@ -219,6 +313,12 @@ PROGRAM _EXIT
 	DRP_m2_To(Enable := FALSE);
 	DRP_m3_Ti(Enable := FALSE);
 	DRP_m3_To(Enable := FALSE);
+	DRP_p_pumpe_before(Enable := FALSE);
+	DRP_p_pumpe_after(Enable := FALSE);
+	DRP_p_last(Enable := FALSE);
+	DRP_inverter_DC(Enable := FALSE);
+	DRP_inverter_voltage(Enable := FALSE);
+	DRP_inverter_current(Enable := FALSE);
 	
 END_PROGRAM
 

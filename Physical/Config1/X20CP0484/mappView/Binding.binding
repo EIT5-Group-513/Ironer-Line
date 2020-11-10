@@ -73,9 +73,30 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:heater" attribute="value" />
 <Target xsi:type="brease" contentRefId="content_0" widgetRefId="Heater_input" attribute="value" />
 </Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:T_ambient" attribute="value" />
 <Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_ambient" attribute="value" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Omregner:p_before_pump_bar" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="P_Pump_Before_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Omregner:flow_cooling_water_mls" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Flow" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Omregner:p_after_pump_bar" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="P_Pump_After_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Omregner:p_last_bar" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="P_Last_in" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

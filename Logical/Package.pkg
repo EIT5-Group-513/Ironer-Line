@@ -9,5 +9,6 @@
     <Object Type="Package">mappView</Object>
     <Object Type="Program" Language="ANSIC">Failsafe</Object>
     <Object Type="Program" Language="ANSIC">Kontroller</Object>
+    <Object Type="Program" Language="ANSIC">Omregner</Object>
   </Objects>
 </Package>
