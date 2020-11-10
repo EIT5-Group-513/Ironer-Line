@@ -4,12 +4,12 @@ VAR
 	DRP_inverter_current : MpDataRegPar;
 	DRP_inverter_RPM : MpDataRegPar;
 	DataRecorder : MpDataRecorder;
-	DRP_m3_To : MpDataRegPar;
-	DRP_m3_Ti : MpDataRegPar;
-	DRP_m2_To : MpDataRegPar;
-	DRP_m2_Ti : MpDataRegPar;
-	DRP_m1_To : MpDataRegPar;
-	DRP_m1_Ti : MpDataRegPar;
+	DRP_m3_olie_To : MpDataRegPar;
+	DRP_m3_olie_Ti : MpDataRegPar;
+	DRP_m2_olie_To : MpDataRegPar;
+	DRP_m2_olie_Ti : MpDataRegPar;
+	DRP_m1_olie_To : MpDataRegPar;
+	DRP_m1_olie_Ti : MpDataRegPar;
 	DRP_T_tank : MpDataRegPar;
 	DRP_heater : MpDataRegPar;
 	DRP_T_ambient : MpDataRegPar;

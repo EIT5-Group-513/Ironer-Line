@@ -46,23 +46,18 @@
     <Connection Connector="SL" TargetModule="X20BM11a" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
-    <Parameter ID="SensorType03" Value="off" />
-    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20AT4222-3" Type="X20AT4222" Version="1.2.2.0">
     <Connection Connector="SS1" TargetModule="X20TB12c" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11b" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
-    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20AT4222-4" Type="X20AT4222" Version="1.2.2.0">
     <Connection Connector="SS1" TargetModule="X20TB12d" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11c" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="FunctionModel001" />
     <Parameter ID="Supervision" Value="off" />
-    <Parameter ID="SensorType03" Value="off" />
-    <Parameter ID="SensorType04" Value="off" />
   </Module>
   <Module Name="X20BB52" Type="X20BB52" Version="1.1.0.0" />
   <Module Name="X20BM11" Type="X20BM11" Version="1.0.0.1">
@@ -100,7 +95,6 @@
     </Connector>
     <Parameter ID="ConfigurationID" Value="EIT5Projekt1_Config1" />
     <Parameter ID="UserPartitionSize" Value="100" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="SWIOTIMER" />
     <Parameter ID="Cyclic1Duration" Value="10000" />
     <Parameter ID="Cyclic1Tolerance" Value="10000" />

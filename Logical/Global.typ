@@ -13,12 +13,19 @@ TYPE
 		DC : UINT;
 	END_STRUCT;
 	mulde_type : 	STRUCT 
-		T_out : INT;
-		T_in : INT;
-		T_t_out : INT;
+		olie : olie_type;
+		toej : toej_type;
 	END_STRUCT;
 	p_pumpe_type : 	STRUCT 
 		after : INT;
 		before : INT;
+	END_STRUCT;
+	olie_type : 	STRUCT 
+		T_out : INT;
+		T_in : INT;
+	END_STRUCT;
+	toej_type : 	STRUCT 
+		T_out : INT;
+		T_in : INT;
 	END_STRUCT;
 END_TYPE

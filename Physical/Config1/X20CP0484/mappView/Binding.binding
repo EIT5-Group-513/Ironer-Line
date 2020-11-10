@@ -17,30 +17,12 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:T_tank" attribute="value" />
 <Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_tank_out" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.T_in" attribute="value" />
-<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde1_in" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.T_out" attribute="value" />
-<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde1_out" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.T_in" attribute="value" />
-<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde2_in" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.T_out" attribute="value" />
-<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde2_out" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.T_in" attribute="value" />
-<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde3_in" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.T_out" attribute="value" />
-<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde3_out" attribute="value" />
-</Binding>
+
+
+
+
+
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:inverter.voltage" attribute="value" />
 <Target xsi:type="brease" contentRefId="content_0" widgetRefId="Voltage" attribute="value" />
@@ -97,6 +79,58 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Omregner:p_last_bar" attribute="value" />
 <Target xsi:type="brease" contentRefId="content_0" widgetRefId="P_Last_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.olie.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde1_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.olie.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde1_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.olie.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde2_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.olie.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde2_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.olie.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde3_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.olie.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_mulde3_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:failState" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="FailState" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.toej.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_cooling_mulde3_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_3.toej.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_cooling_mulde3_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.toej.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_cooling_mulde2_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_2.toej.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_cooling_mulde2_in" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.toej.T_out" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_cooling_mulde1_out" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.toej.T_in" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_cooling_mulde1_in" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

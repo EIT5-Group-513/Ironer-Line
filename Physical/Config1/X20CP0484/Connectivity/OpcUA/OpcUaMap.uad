@@ -23,19 +23,38 @@
         </Variable>
         <Variable Name="heater" />
         <Variable Name="mulde_1">
-          <Variable Name="T_out" />
-          <Variable Name="T_in" />
+          <Variable Name="olie">
+            <Variable Name="T_out" />
+            <Variable Name="T_in" />
+          </Variable>
+          <Variable Name="toej">
+            <Variable Name="T_out" />
+            <Variable Name="T_in" />
+          </Variable>
         </Variable>
         <Variable Name="mulde_2">
-          <Variable Name="T_out" />
-          <Variable Name="T_in" />
+          <Variable Name="olie">
+            <Variable Name="T_out" />
+            <Variable Name="T_in" />
+          </Variable>
+          <Variable Name="toej">
+            <Variable Name="T_out" />
+            <Variable Name="T_in" />
+          </Variable>
         </Variable>
         <Variable Name="mulde_3">
-          <Variable Name="T_out" />
-          <Variable Name="T_in" />
+          <Variable Name="olie">
+            <Variable Name="T_out" />
+            <Variable Name="T_in" />
+          </Variable>
+          <Variable Name="toej">
+            <Variable Name="T_out" />
+            <Variable Name="T_in" />
+          </Variable>
         </Variable>
         <Variable Name="T_tank" />
         <Variable Name="T_ambient" />
+        <Variable Name="failState" />
       </GlobalVariables>
       <Task Name="Data_log_p" />
       <Task Name="Omregner">

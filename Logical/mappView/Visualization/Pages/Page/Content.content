@@ -2,45 +2,57 @@
 <Content id="content_0" height="1080" width="1440" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="20" width="280" height="60" zIndex="0" text="IronerLine model HMI" backColor="rgba(255, 255, 255, 0)" fontSize="24px" bold="true" />
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox1" top="80" left="760" width="220" height="180" zIndex="1" text="Mulde 1">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox1" top="80" left="940" width="460" height="180" zIndex="1" text="Mulde 1">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde1_in" top="27" left="99" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde1_out" top="87" left="99" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.Label" id="Label3" top="27" left="19" zIndex="2" text="Temp in" textAlign="right" />
-        <Widget xsi:type="widgets.brease.Label" id="Label4" top="87" left="19" zIndex="3" text="Temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde1_in" top="27" left="119" width="79" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde1_out" top="87" left="119" width="79" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.Label" id="Label3" top="27" left="19" width="100" zIndex="2" text="Oil Temp in" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label4" top="86" left="19" width="100" zIndex="3" text="Oil temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label31" top="26" left="239" width="119" zIndex="4" text="Cooling temp in" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label32" top="88" left="219" width="137" height="29" zIndex="5" text="Cooling temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_cooling_mulde1_in" top="26" left="359" width="83" zIndex="6" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_cooling_mulde1_out" top="85" left="359" width="83" zIndex="7" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox2" top="282" left="760" width="220" height="180" zIndex="2" text="Mulde 2">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox2" top="280" left="940" width="460" height="180" zIndex="2" text="Mulde 2">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde2_in" top="27" left="99" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde2_out" top="87" left="99" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.Label" id="Label5" top="27" left="19" zIndex="2" text="Temp in" textAlign="right" />
-        <Widget xsi:type="widgets.brease.Label" id="Label6" top="86" left="19" zIndex="3" text="Temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde2_in" top="26" left="119" width="79" height="29" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde2_out" top="85" left="119" width="79" height="29" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.Label" id="Label5" top="26" left="19" width="100" zIndex="2" text="Oil Temp in" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label6" top="85" left="19" width="100" zIndex="3" text="Oil temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label33" top="28" left="239" width="119" zIndex="4" text="Cooling temp in" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label34" top="90" left="219" width="137" height="29" zIndex="5" text="Cooling temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_cooling_mulde2_in" top="28" left="359" width="83" zIndex="6" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_cooling_mulde2_out" top="87" left="359" width="83" zIndex="7" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox3" top="482" left="760" width="220" height="180" zIndex="3" text="Mulde 3">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox3" top="479" left="940" width="460" height="180" zIndex="3" text="Mulde 3">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde3_in" top="27" left="99" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde3_out" top="87" left="99" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.Label" id="Label7" top="27" left="19" zIndex="2" text="Temp in" textAlign="right" />
-        <Widget xsi:type="widgets.brease.Label" id="Label8" top="87" left="19" zIndex="3" text="Temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde3_in" top="27" left="120" width="79" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_mulde3_out" top="87" left="120" width="79" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.Label" id="Label7" top="27" left="18" width="100" zIndex="2" text="Oil Temp in" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label8" top="86" left="18" width="100" zIndex="3" text="Oil temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label35" top="29" left="238" width="119" zIndex="4" text="Cooling temp in" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label36" top="91" left="218" width="137" height="29" zIndex="5" text="Cooling temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_cooling_mulde3_in" top="29" left="358" width="83" zIndex="6" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_cooling_mulde3_out" top="88" left="358" width="83" zIndex="7" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox4" top="80" left="20" width="420" height="140" zIndex="4" text="Pump control">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox4" top="80" left="20" width="480" height="120" zIndex="4" text="Pump control">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericInput" id="Inverter_CTRL_Input" top="47" left="39" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" keyboard="false" maxValue="999" showUnit="false" />
-        <Widget xsi:type="widgets.brease.Label" id="Label2" top="7" left="19" width="160" height="40" zIndex="1" text="Inverter CTRL input" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="Inverter_CTRL_Input1" top="47" left="239" zIndex="2" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" keyboard="false" maxValue="4000" showUnit="false" />
-        <Widget xsi:type="widgets.brease.Label" id="Label9" top="7" left="219" width="160" height="40" zIndex="3" text="Pump RPM input" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="Inverter_CTRL_Input" top="27" left="138" width="79" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" keyboard="false" maxValue="999" showUnit="false" />
+        <Widget xsi:type="widgets.brease.Label" id="Label2" top="27" left="0" width="140" height="33" zIndex="1" text="Inverter CTRL input" textAlign="center" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="Inverter_CTRL_Input1" top="27" left="379" width="79" zIndex="2" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" keyboard="false" maxValue="4000" showUnit="false" />
+        <Widget xsi:type="widgets.brease.Label" id="Label9" top="27" left="258" width="122" height="27" zIndex="3" text="Pump RPM input" textAlign="right" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox5" top="80" left="520" width="220" height="120" zIndex="5" text="Tank">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox5" top="80" left="520" width="180" height="120" zIndex="5" text="Tank">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_tank_out" top="27" left="99" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.Label" id="Label10" top="27" left="19" zIndex="1" text="Temp out" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_tank_out" top="27" left="79" width="79" height="29" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.Label" id="Label10" top="27" left="20" width="60" zIndex="1" text="Temp" textAlign="right" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox7" top="240" left="20" width="480" height="260" zIndex="6" text="Inverter data">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox7" top="440" left="20" width="480" height="260" zIndex="6" text="Inverter data">
       <Widgets>
         <Widget xsi:type="widgets.brease.NumericOutput" id="RPM" top="27" left="99" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
         <Widget xsi:type="widgets.brease.NumericOutput" id="Voltage" top="87" left="99" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
@@ -57,30 +69,30 @@
         <Widget xsi:type="widgets.brease.Label" id="Label18" top="147" left="199" zIndex="12" text="[0.1 V]" textAlign="left" fontName="Arial" italic="false" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox8" top="520" left="20" width="360" height="200" zIndex="7" text="Heater">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox8" top="220" left="20" width="480" height="201" zIndex="7" text="Heater">
       <Widgets>
-        <Widget xsi:type="widgets.brease.Rectangle" id="Red" top="27" left="19" zIndex="0" backColor="rgba(255, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="Green" top="27" left="19" zIndex="4" backColor="rgba(0, 255, 0, 1)" visible="false" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="Heater_status" top="87" left="219" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.Label" id="Label19" top="87" left="139" zIndex="2" text="Status" textAlign="right" />
-        <Widget xsi:type="widgets.brease.Label" id="Label20" top="27" left="139" zIndex="3" text="Input" textAlign="right" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="Heater_input" top="27" left="219" zIndex="5" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" keyboard="false" maxValue="1" showUnit="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="Red" top="27" left="98" zIndex="0" backColor="rgba(255, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="Green" top="27" left="98" zIndex="4" backColor="rgba(0, 255, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="Heater_status" top="87" left="298" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.Label" id="Label19" top="87" left="218" zIndex="2" text="Status" textAlign="right" />
+        <Widget xsi:type="widgets.brease.Label" id="Label20" top="27" left="218" zIndex="3" text="Input" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="Heater_input" top="27" left="298" zIndex="5" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" keyboard="false" maxValue="1" showUnit="false" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox6" top="219" left="520" width="220" height="120" zIndex="8" text="Temp ambient">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox6" top="80" left="720" width="203" height="120" zIndex="8" text="Temp ambient">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericOutput" id="T_ambient" top="27" left="99" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.Label" id="Label21" top="27" left="19" zIndex="1" text="Temp" textAlign="right" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="T_ambient" top="27" left="80" width="80" height="29" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.Label" id="Label21" top="27" left="1" zIndex="1" text="Temp" textAlign="right" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox9" top="360" left="1000" width="300" height="120" zIndex="9" text="Flow - Cooling water">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox9" top="520" left="520" width="300" height="120" zIndex="9" text="Flow - Cooling water">
       <Widgets>
         <Widget xsi:type="widgets.brease.NumericOutput" id="Flow" top="27" left="100" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
         <Widget xsi:type="widgets.brease.Label" id="Label22" top="28" left="20" zIndex="1" text="Flow in" textAlign="right" />
-        <Widget xsi:type="widgets.brease.Label" id="Label23" top="27" left="200" width="100" zIndex="2" text="[ml]" textAlign="left" fontName="Arial" italic="false" />
+        <Widget xsi:type="widgets.brease.Label" id="Label23" top="27" left="200" width="100" zIndex="2" text="[ml/s]" textAlign="left" fontName="Arial" italic="false" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox10" top="80" left="999" width="401" height="260" zIndex="10" text="Pressure">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox10" top="218" left="520" width="400" height="282" zIndex="10" text="Pressure">
       <Widgets>
         <Widget xsi:type="widgets.brease.Label" id="Label24" top="26" left="18" width="122" zIndex="0" text="Before pump" textAlign="right" />
         <Widget xsi:type="widgets.brease.Label" id="Label25" top="86" left="18" width="122" zIndex="1" text="After pump" textAlign="right" />
@@ -91,6 +103,12 @@
         <Widget xsi:type="widgets.brease.Label" id="Label27" top="26" left="239" zIndex="6" text="[Bar]" />
         <Widget xsi:type="widgets.brease.Label" id="Label28" top="86" left="239" zIndex="7" text="[Bar]" />
         <Widget xsi:type="widgets.brease.Label" id="Label29" top="146" left="239" zIndex="8" text="[Bar]" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox11" top="720" left="20" width="660" height="260" zIndex="11" text="Fail state">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.NumericOutput" id="FailState" top="86" left="38" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.Label" id="Label30" top="20" left="160" width="520" height="180" zIndex="1" multiLine="true" text="1: Over current protection\n&#x9;the average current was too high inside of sample window\n\n 2: Heater check\n&#x9;Heater was on for an extended period of time without flow in the system\n\n  3: Temperature check\n&#x9;Temperature was too high\n\n 8: Over pressure protection\n&#x9;pressure was higher then expected\n" />
       </Widgets>
     </Widget>
   </Widgets>

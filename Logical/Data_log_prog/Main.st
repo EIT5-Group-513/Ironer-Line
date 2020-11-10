@@ -32,23 +32,23 @@ PROGRAM _INIT
 	DRP_inverter_RPM.MpLink := ADR(gDataRecorder);
 	DRP_inverter_RPM.PVName := ADR('inverter.RPM_actual');
 	
-	DRP_m1_Ti.MpLink := ADR(gDataRecorder);
-	DRP_m1_Ti.PVName := ADR('mulde_1.T_in');
+	DRP_m1_olie_Ti.MpLink := ADR(gDataRecorder);
+	DRP_m1_olie_Ti.PVName := ADR('mulde_1.olie.T_in');
 	
-	DRP_m1_To.MpLink := ADR(gDataRecorder);
-	DRP_m1_To.PVName := ADR('mulde_1.T_out');
+	DRP_m1_olie_To.MpLink := ADR(gDataRecorder);
+	DRP_m1_olie_To.PVName := ADR('mulde_1.olie.T_out');
 	
-	DRP_m2_Ti.MpLink := ADR(gDataRecorder);
-	DRP_m2_Ti.PVName := ADR('mulde_2.T_in');
+	DRP_m2_olie_Ti.MpLink := ADR(gDataRecorder);
+	DRP_m2_olie_Ti.PVName := ADR('mulde_2.olie.T_in');
 	
-	DRP_m2_To.MpLink := ADR(gDataRecorder);
-	DRP_m2_To.PVName := ADR('mulde_2.T_out');
+	DRP_m2_olie_To.MpLink := ADR(gDataRecorder);
+	DRP_m2_olie_To.PVName := ADR('mulde_2.olie.T_out');
 	
-	DRP_m3_Ti.MpLink := ADR(gDataRecorder);
-	DRP_m3_Ti.PVName := ADR('mulde_3.T_in');
+	DRP_m3_olie_Ti.MpLink := ADR(gDataRecorder);
+	DRP_m3_olie_Ti.PVName := ADR('mulde_3.olie.T_in');
 	
-	DRP_m3_To.MpLink := ADR(gDataRecorder);
-	DRP_m3_To.PVName := ADR('mulde_3.T_out');
+	DRP_m3_olie_To.MpLink := ADR(gDataRecorder);
+	DRP_m3_olie_To.PVName := ADR('mulde_3.olie.T_out');
 	
 	DRP_p_pumpe_before.MpLink := ADR(gDataRecorder);
 	DRP_p_pumpe_before.PVName := ADR('p_pumpe.before');
@@ -131,66 +131,66 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 			
-			DRP_m1_Ti.Enable := TRUE;
+			DRP_m1_olie_Ti.Enable := TRUE;
 			
-			IF DRP_m1_Ti.Active THEN
-				IF DRP_m1_Ti.StatusID = 0 THEN
-					DRP_m1_Ti.Enable := TRUE;
+			IF DRP_m1_olie_Ti.Active THEN
+				IF DRP_m1_olie_Ti.StatusID = 0 THEN
+					DRP_m1_olie_Ti.Enable := TRUE;
 					state := 20;
 				ELSE
 					state := 200;
 				END_IF
 			END_IF
 			
-			DRP_m1_To.Enable := TRUE;
+			DRP_m1_olie_To.Enable := TRUE;
 			
-			IF DRP_m1_To.Active THEN
-				IF DRP_m1_To.StatusID = 0 THEN
-					DRP_m1_To.Enable := TRUE;
+			IF DRP_m1_olie_To.Active THEN
+				IF DRP_m1_olie_To.StatusID = 0 THEN
+					DRP_m1_olie_To.Enable := TRUE;
 					state := 20;
 				ELSE
 					state := 200;
 				END_IF
 			END_IF
 			
-			DRP_m2_Ti.Enable := TRUE;
+			DRP_m2_olie_Ti.Enable := TRUE;
 			
-			IF DRP_m2_Ti.Active THEN
-				IF DRP_m2_Ti.StatusID = 0 THEN
-					DRP_m2_Ti.Enable := TRUE;
+			IF DRP_m2_olie_Ti.Active THEN
+				IF DRP_m2_olie_Ti.StatusID = 0 THEN
+					DRP_m2_olie_Ti.Enable := TRUE;
 					state := 20;
 				ELSE
 					state := 200;
 				END_IF
 			END_IF
 			
-			DRP_m2_To.Enable := TRUE;
+			DRP_m2_olie_To.Enable := TRUE;
 			
-			IF DRP_m2_To.Active THEN
-				IF DRP_m2_To.StatusID = 0 THEN
-					DRP_m2_To.Enable := TRUE;
+			IF DRP_m2_olie_To.Active THEN
+				IF DRP_m2_olie_To.StatusID = 0 THEN
+					DRP_m2_olie_To.Enable := TRUE;
 					state := 20;
 				ELSE
 					state := 200;
 				END_IF
 			END_IF
 			
-			DRP_m3_Ti.Enable := TRUE;
+			DRP_m3_olie_Ti.Enable := TRUE;
 			
-			IF DRP_m3_Ti.Active THEN
-				IF DRP_m3_Ti.StatusID = 0 THEN
-					DRP_m3_Ti.Enable := TRUE;
+			IF DRP_m3_olie_Ti.Active THEN
+				IF DRP_m3_olie_Ti.StatusID = 0 THEN
+					DRP_m3_olie_Ti.Enable := TRUE;
 					state := 20;
 				ELSE
 					state := 200;
 				END_IF
 			END_IF
 			
-			DRP_m3_To.Enable := TRUE;
+			DRP_m3_olie_To.Enable := TRUE;
 			
-			IF DRP_m3_To.Active THEN
-				IF DRP_m3_To.StatusID = 0 THEN
-					DRP_m3_To.Enable := TRUE;
+			IF DRP_m3_olie_To.Active THEN
+				IF DRP_m3_olie_To.StatusID = 0 THEN
+					DRP_m3_olie_To.Enable := TRUE;
 					state := 20;
 				ELSE
 					state := 200;
@@ -284,12 +284,12 @@ PROGRAM _CYCLIC
 	DRP_heater();
 	DRP_inverter_RPM();
 	DRP_T_tank();
-	DRP_m1_Ti();
-	DRP_m1_To();
-	DRP_m2_Ti();
-	DRP_m2_To();
-	DRP_m3_Ti();
-	DRP_m3_To();
+	DRP_m1_olie_Ti();
+	DRP_m1_olie_To();
+	DRP_m2_olie_Ti();
+	DRP_m2_olie_To();
+	DRP_m3_olie_Ti();
+	DRP_m3_olie_To();
 	DRP_p_pumpe_before();
 	DRP_p_pumpe_after();
 	DRP_p_last();
@@ -307,12 +307,12 @@ PROGRAM _EXIT
 	DRP_heater(Enable := FALSE);
 	DRP_inverter_RPM(Enable := FALSE);
 	DRP_T_tank(Enable := FALSE);
-	DRP_m1_Ti(Enable := FALSE);
-	DRP_m1_To(Enable := FALSE);
-	DRP_m2_Ti(Enable := FALSE);
-	DRP_m2_To(Enable := FALSE);
-	DRP_m3_Ti(Enable := FALSE);
-	DRP_m3_To(Enable := FALSE);
+	DRP_m1_olie_Ti(Enable := FALSE);
+	DRP_m1_olie_To(Enable := FALSE);
+	DRP_m2_olie_Ti(Enable := FALSE);
+	DRP_m2_olie_To(Enable := FALSE);
+	DRP_m3_olie_Ti(Enable := FALSE);
+	DRP_m3_olie_To(Enable := FALSE);
 	DRP_p_pumpe_before(Enable := FALSE);
 	DRP_p_pumpe_after(Enable := FALSE);
 	DRP_p_last(Enable := FALSE);
