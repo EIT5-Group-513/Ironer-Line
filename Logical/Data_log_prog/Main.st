@@ -68,6 +68,30 @@ PROGRAM _INIT
 	DRP_inverter_current.MpLink := ADR(gDataRecorder);
 	DRP_inverter_current.PVName := ADR('inverter.current');
 	
+	DRP_m1_toej_Ti.MpLink := ADR(gDataRecorder);
+	DRP_m1_toej_Ti.PVName := ADR('mulde_1.toej.T_in');
+	
+	DRP_m1_toej_To.MpLink := ADR(gDataRecorder);
+	DRP_m1_toej_To.PVName := ADR('mulde_1.toej.T_out');
+	
+	DRP_m2_toej_Ti.MpLink := ADR(gDataRecorder);
+	DRP_m2_toej_Ti.PVName := ADR('mulde_2.toej.T_in');
+	
+	DRP_m2_toej_To.MpLink := ADR(gDataRecorder);
+	DRP_m2_toej_To.PVName := ADR('mulde_2.toej.T_out');
+	
+	DRP_m3_toej_Ti.MpLink := ADR(gDataRecorder);
+	DRP_m3_toej_Ti.PVName := ADR('mulde_3.toej.T_in');
+	
+	DRP_m3_toej_To.MpLink := ADR(gDataRecorder);
+	DRP_m3_toej_To.PVName := ADR('mulde_3.toej.T_out');
+	
+	DRP_failState.MpLink := ADR(gDataRecorder);
+	DRP_failState.PVName := ADR('failState'); 
+	
+	DRP_flow_cooling_water.MpLink := ADR(gDataRecorder);
+	DRP_flow_cooling_water.PVName := ADR('flow_cooling_water'); 
+	
 	
 END_PROGRAM
 
@@ -263,6 +287,93 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 			
+			DRP_m1_toej_Ti.Enable := TRUE;
+			
+			IF DRP_m1_toej_Ti.Active THEN
+				IF DRP_m1_toej_Ti.StatusID = 0 THEN
+					DRP_m1_toej_Ti.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_m1_toej_To.Enable := TRUE;
+			
+			IF DRP_m1_toej_To.Active THEN
+				IF DRP_m1_toej_To.StatusID = 0 THEN
+					DRP_m1_toej_To.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_m2_toej_Ti.Enable := TRUE;
+			
+			IF DRP_m2_toej_Ti.Active THEN
+				IF DRP_m2_toej_Ti.StatusID = 0 THEN
+					DRP_m2_toej_Ti.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_m2_toej_To.Enable := TRUE;
+			
+			IF DRP_m2_toej_To.Active THEN
+				IF DRP_m2_toej_To.StatusID = 0 THEN
+					DRP_m2_toej_To.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_m3_toej_Ti.Enable := TRUE;
+			
+			IF DRP_m3_toej_Ti.Active THEN
+				IF DRP_m3_toej_Ti.StatusID = 0 THEN
+					DRP_m3_toej_Ti.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_m3_toej_To.Enable := TRUE;
+			
+			IF DRP_m3_toej_To.Active THEN
+				IF DRP_m3_toej_To.StatusID = 0 THEN
+					DRP_m3_toej_To.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_failState.Enable := TRUE;
+			
+			IF DRP_failState.Active THEN
+				IF DRP_failState.StatusID = 0 THEN
+					DRP_failState.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_flow_cooling_water.Enable := TRUE;
+			
+			IF DRP_flow_cooling_water.Active THEN
+				IF DRP_flow_cooling_water.StatusID = 0 THEN
+					DRP_flow_cooling_water.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
 			
 			// add more regpar in between..
 		20: 
@@ -296,7 +407,14 @@ PROGRAM _CYCLIC
 	DRP_inverter_DC();
 	DRP_inverter_voltage();
 	DRP_inverter_current();
-	
+	DRP_m1_toej_Ti();
+	DRP_m1_toej_To();
+	DRP_m2_toej_Ti();
+	DRP_m2_toej_To();
+	DRP_m3_toej_Ti();
+	DRP_m3_toej_To();
+	DRP_failState();
+	DRP_flow_cooling_water();
 	
 END_PROGRAM
 
@@ -319,6 +437,14 @@ PROGRAM _EXIT
 	DRP_inverter_DC(Enable := FALSE);
 	DRP_inverter_voltage(Enable := FALSE);
 	DRP_inverter_current(Enable := FALSE);
+	DRP_m1_toej_Ti(Enable := FALSE);
+	DRP_m1_toej_To(Enable := FALSE);
+	DRP_m2_toej_Ti(Enable := FALSE);
+	DRP_m2_toej_To(Enable := FALSE);
+	DRP_m3_toej_Ti(Enable := FALSE);
+	DRP_m3_toej_To(Enable := FALSE);
+	DRP_failState(Enable := FALSE);
+	DRP_flow_cooling_water(Enable := FALSE);
 	
 END_PROGRAM
 
