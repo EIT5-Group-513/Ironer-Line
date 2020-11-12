@@ -108,7 +108,7 @@
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox11" top="720" left="20" width="660" height="260" zIndex="11" text="Fail state">
       <Widgets>
         <Widget xsi:type="widgets.brease.NumericOutput" id="FailState" top="86" left="38" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.Label" id="Label30" top="20" left="160" width="520" height="180" zIndex="1" multiLine="true" text="1: Over current protection\n&#x9;the average current was too high inside of sample window\n\n 2: Heater check\n&#x9;Heater was on for an extended period of time without flow in the system\n\n  3: Temperature check\n&#x9;Temperature was too high\n\n 8: Over pressure protection\n&#x9;pressure was higher then expected\n" />
+        <Widget xsi:type="widgets.brease.Label" id="Label30" top="20" left="160" width="520" height="180" zIndex="1" multiLine="true" text="1: Over current protection\n&#x9;the average current was too high inside of sample window\n\n 2: Heater check\n&#x9;Heater was on for an extended period of time without flow in the system\n\n  4: Temperature check\n&#x9;Temperature was too high\n\n 8: Over pressure protection\n&#x9;pressure was higher then expected\n" />
       </Widgets>
     </Widget>
   </Widgets>
