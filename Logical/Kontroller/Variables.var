@@ -1,3 +1,4 @@
 VAR
 	PWM : PWM_type;
+	D : controller_type; (*coefficients and registers for the controller*)
 END_VAR

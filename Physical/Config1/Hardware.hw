@@ -95,9 +95,10 @@
     </Connector>
     <Parameter ID="ConfigurationID" Value="EIT5Projekt1_Config1" />
     <Parameter ID="UserPartitionSize" Value="100" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="SWIOTIMER" />
-    <Parameter ID="Cyclic1Duration" Value="10000" />
-    <Parameter ID="Cyclic1Tolerance" Value="10000" />
+    <Parameter ID="Cyclic1Duration" Value="5000" />
+    <Parameter ID="Cyclic1Tolerance" Value="5000" />
     <Parameter ID="Cyclic2Duration" Value="20000" />
     <Parameter ID="Cyclic2Tolerance" Value="20000" />
     <Parameter ID="Cyclic3Duration" Value="50000" />
@@ -110,8 +111,8 @@
     <Parameter ID="Cyclic6Tolerance" Value="500000" />
     <Parameter ID="Cyclic7Duration" Value="1000000" />
     <Parameter ID="Cyclic7Tolerance" Value="1000000" />
-    <Parameter ID="Cyclic8Duration" Value="10000" />
-    <Parameter ID="Cyclic8Tolerance" Value="30000000" />
+    <Parameter ID="Cyclic8Duration" Value="5000000" />
+    <Parameter ID="Cyclic8Tolerance" Value="5000000" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="PLC_user" />
     <Parameter ID="FileDevicePath1" Value="F:\" />
