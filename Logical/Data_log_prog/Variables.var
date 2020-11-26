@@ -24,5 +24,8 @@ VAR
 	state : USINT;
 	DRP_p_pumpe_before : MpDataRegPar;
 	DRP_p_pumpe_after : MpDataRegPar;
+	DRP_PWM_duty : MpDataRegPar;
+	DRP_ctrl_D_u : MpDataRegPar;
+	DRP_ctrl_ref : MpDataRegPar;
 	DRP_p_last : MpDataRegPar;
 END_VAR

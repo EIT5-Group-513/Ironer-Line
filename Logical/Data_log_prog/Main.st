@@ -90,8 +90,16 @@ PROGRAM _INIT
 	DRP_failState.PVName := ADR('failState'); 
 	
 	DRP_flow_cooling_water.MpLink := ADR(gDataRecorder);
-	DRP_flow_cooling_water.PVName := ADR('flow_cooling_water'); 
+	DRP_flow_cooling_water.PVName := ADR('flow_cooling_water');
 	
+	DRP_ctrl_ref.MpLink := ADR(gDataRecorder);
+	DRP_ctrl_ref.PVName := ADR('Kontroller:ref');
+	
+	DRP_ctrl_D_u.MpLink := ADR(gDataRecorder);
+	DRP_ctrl_D_u.PVName := ADR('Kontroller:D.u');
+	
+	DRP_PWM_duty.MpLink := ADR(gDataRecorder);
+	DRP_PWM_duty.PVName := ADR('Kontroller:PWM.duty');
 	
 END_PROGRAM
 
@@ -375,6 +383,39 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 			
+			DRP_ctrl_ref.Enable := TRUE;
+			
+			IF DRP_ctrl_ref.Active THEN
+				IF DRP_ctrl_ref.StatusID = 0 THEN
+					DRP_ctrl_ref.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_ctrl_D_u.Enable := TRUE;
+			
+			IF DRP_ctrl_D_u.Active THEN
+				IF DRP_ctrl_D_u.StatusID = 0 THEN
+					DRP_ctrl_D_u.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
+			DRP_PWM_duty.Enable := TRUE;
+			
+			IF DRP_PWM_duty.Active THEN
+				IF DRP_PWM_duty.StatusID = 0 THEN
+					DRP_PWM_duty.Enable := TRUE;
+					state := 20;
+				ELSE
+					state := 200;
+				END_IF
+			END_IF
+			
 			// add more regpar in between..
 		20: 
 		
@@ -415,6 +456,9 @@ PROGRAM _CYCLIC
 	DRP_m3_toej_To();
 	DRP_failState();
 	DRP_flow_cooling_water();
+	DRP_ctrl_ref();
+	DRP_ctrl_D_u();
+	DRP_PWM_duty();
 	
 END_PROGRAM
 
@@ -445,6 +489,9 @@ PROGRAM _EXIT
 	DRP_m3_toej_To(Enable := FALSE);
 	DRP_failState(Enable := FALSE);
 	DRP_flow_cooling_water(Enable := FALSE);
+	DRP_ctrl_ref(Enable := FALSE);
+	DRP_ctrl_D_u(Enable := FALSE);
+	DRP_PWM_duty(Enable := FALSE);
 	
 END_PROGRAM
 

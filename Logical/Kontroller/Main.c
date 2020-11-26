@@ -104,7 +104,7 @@ void _INIT ProgramInit(void) {
 
 void _CYCLIC ProgramCyclic(void) {
 	
-	if(failstate == 0) {
+	if(failState == 0) {
 		PWM_fun();
 		onOff_fun();
 		D_fun();
