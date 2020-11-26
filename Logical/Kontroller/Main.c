@@ -31,7 +31,7 @@ void PWM_fun(void) {
 	}
 	 
 	PWM.out = (PWM.cntr < PWM.duty); // set PWM out to true if cntr is smaller than dutycycle
-	
+	heater = PWM.out;
 }
 
 void onOff_fun(void) {
@@ -104,11 +104,11 @@ void _INIT ProgramInit(void) {
 
 void _CYCLIC ProgramCyclic(void) {
 	
-	
-	PWM_fun();
-	onOff_fun();
-	D_fun();
-	
+	if(failstate == 0) {
+		PWM_fun();
+		onOff_fun();
+		D_fun();
+	}
 }
 
 void _EXIT ProgramExit(void) {
