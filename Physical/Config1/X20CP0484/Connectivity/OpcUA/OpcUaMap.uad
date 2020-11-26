@@ -63,6 +63,15 @@
         <Variable Name="p_last_bar" />
         <Variable Name="flow_cooling_water_mls" />
       </Task>
+      <Task Name="Kontroller">
+        <Variable Name="D">
+          <Variable Name="u" />
+        </Variable>
+        <Variable Name="PWM">
+          <Variable Name="duty" />
+        </Variable>
+        <Variable Name="ref" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

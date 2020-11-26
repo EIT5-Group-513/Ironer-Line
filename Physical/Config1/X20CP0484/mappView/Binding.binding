@@ -132,5 +132,17 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:mulde_1.toej.T_in" attribute="value" />
 <Target xsi:type="brease" contentRefId="content_0" widgetRefId="T_cooling_mulde1_in" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Kontroller:ref" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Ctrl_ref" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Kontroller:D.u" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Ctrl_output" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Kontroller:PWM.duty" attribute="value" />
+<Target xsi:type="brease" contentRefId="content_0" widgetRefId="Duty_cycle" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>
