@@ -110,13 +110,13 @@ void _INIT ProgramInit(void) {
 	
 	// anti-aliasing filter coefficients
 	// denum
-	aaF.a[0] = 1.0000;
-	aaF.a[1] = -1.9733;
-	aaF.a[2] = 0.97370;
+	aaF.a[0] = 1;
+	aaF.a[1] = -1.973345012243308;
+	aaF.a[2] = 0.973695614510382;
 	// num
-	aaF.b[0] = 0.000087651;
-	aaF.b[1] = 0.00017530;
-	aaF.b[2] = 0.000087651;
+	aaF.b[0] = 0.087650566768491E-3;
+	aaF.b[1] = 0.175301133536982E-3;
+	aaF.b[2] = 0.087650566768491E-3;
 	
 	// controller coefficients
 	// denum

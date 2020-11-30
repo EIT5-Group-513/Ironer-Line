@@ -99,6 +99,7 @@
     </Connector>
     <Parameter ID="ConfigurationID" Value="EIT5Projekt1_Config1" />
     <Parameter ID="UserPartitionSize" Value="100" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="SWIOTIMER" />
     <Parameter ID="Cyclic1Duration" Value="5000" />
     <Parameter ID="Cyclic1Tolerance" Value="5000" />
