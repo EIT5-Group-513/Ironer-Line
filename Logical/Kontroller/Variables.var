@@ -6,4 +6,5 @@ VAR
 	ref : UINT := 550; (*referance signal in d°C*)
 	T : UINT := 0; (*actual temperature in d°C*)
 	en_last : UINT := 0; (*do function variable from last cycle*)
+	aaF : aaFilter_type; (*anti aliasing filter*)
 END_VAR

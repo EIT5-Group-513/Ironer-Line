@@ -6,9 +6,30 @@
 #endif
 
 
+
+void aaF_fun(void) {
+	
+	aaF.cntr++;
+	
+	if (aaF.cntr >= aaF.timescale) {
+		
+		// implementation of the difference equations for anti-aliasing filter
+		aaF.w[0] = aaF.a[0]*mulde_1.olie.T_in - aaF.a[1]*aaF.w[1] - aaF.a[2]*aaF.w[2];
+		T = (UINT)(aaF.b[0]*aaF.w[0] + aaF.b[1]*aaF.w[1] + aaF.b[2]*aaF.w[2]);
+	
+		// update of registers (delayed signals)
+		aaF.w[2] = aaF.w[1];
+		aaF.w[1] = aaF.w[0];	
+		
+		// reset counter
+		aaF.cntr = 0;
+	}
+	
+}
+
 void contAlg(REAL e) {
 	
-	// implementation of the difference equations
+	// implementation of the difference equations for controller
 	D.w[0] = D.a[0]*e - D.a[1]*D.w[1] - D.a[2]*D.w[2];
 	D.u = D.b[0]*D.w[0] + D.b[1]*D.w[1] + D.b[2]*D.w[2];
 	D.u += D.offset;
@@ -24,9 +45,9 @@ void PWM_fun(void) {
 	en = 0;
 	PWM.cntr++;
 	
-	if (PWM.cntr >= PWM.timescale + 1) { // +1 to not skip the last cycle
+	if (PWM.cntr >= PWM.timescale) { // +1 to not skip the last cycle
 		en = 1; // do controller
-		T = mulde_1.olie.T_in; // read measured temperature
+		// T = mulde_1.olie.T_in; // read measured temperature // moved to filter_fun
 		PWM.cntr = 0; 
 	}
 	 
@@ -81,12 +102,23 @@ void _INIT ProgramInit(void) {
 	D;
 	PWM;
 	onOff;
+	aaF;
 	en;
 	en_last;
 	ref;
 	T;
 	
-	// controller koefficients
+	// anti-aliasing filter coefficients
+	// denum
+	aaF.a[0] = 1.0000;
+	aaF.a[1] = -1.9733;
+	aaF.a[2] = 0.97370;
+	// num
+	aaF.b[0] = 0.000087651;
+	aaF.b[1] = 0.00017530;
+	aaF.b[2] = 0.000087651;
+	
+	// controller coefficients
 	// denum
 	D.a[0] = 1.00000;
 	D.a[1] = -1.8568;
@@ -105,6 +137,8 @@ void _INIT ProgramInit(void) {
 void _CYCLIC ProgramCyclic(void) {
 	
 	if(failState == 0) {
+		aaF_fun();
+		
 		PWM_fun();
 		onOff_fun();
 		D_fun();

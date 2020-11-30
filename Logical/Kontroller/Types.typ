@@ -1,5 +1,12 @@
 
 TYPE
+	aaFilter_type : 	STRUCT  (*Anti aliasing filter*)
+		timescale : UINT := 6;
+		cntr : UINT := 0;
+		a : ARRAY[0..2]OF REAL; (*numerators*)
+		b : ARRAY[0..2]OF REAL; (*denumenators*)
+		w : ARRAY[0..2]OF REAL := [0];
+	END_STRUCT;
 	onOff_type : 	STRUCT 
 		dT : ARRAY[0..1]OF UINT; (*hysterese interval*)
 	END_STRUCT;
