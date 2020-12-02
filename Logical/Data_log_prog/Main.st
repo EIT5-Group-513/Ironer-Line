@@ -100,7 +100,7 @@ PROGRAM _INIT
 	
 	DRP_PWM_duty.MpLink := ADR(gDataRecorder);
 	DRP_PWM_duty.PVName := ADR('Kontroller:PWM.duty');
-	
+		
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -415,7 +415,7 @@ PROGRAM _CYCLIC
 					state := 200;
 				END_IF
 			END_IF
-			
+						
 			// add more regpar in between..
 		20: 
 		

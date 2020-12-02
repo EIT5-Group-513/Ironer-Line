@@ -118,7 +118,7 @@
         <Widget xsi:type="widgets.brease.Label" id="Label39" top="27" left="40" width="100" zIndex="2" text="Reference" textAlign="right" />
         <Widget xsi:type="widgets.brease.NumericOutput" id="Ctrl_output" top="87" left="159" zIndex="3" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
         <Widget xsi:type="widgets.brease.NumericOutput" id="Duty_cycle" top="147" left="159" zIndex="4" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="Ctrl_ref" top="27" left="159" zIndex="5" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="Ctrl_ref" top="27" left="159" zIndex="5" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" keyboard="false" maxValue="1000" />
         <Widget xsi:type="widgets.brease.Label" id="Label40" top="87" left="259" zIndex="6" text="[W]" />
         <Widget xsi:type="widgets.brease.Label" id="Label41" top="27" left="259" zIndex="7" text="[d°C]" />
         <Widget xsi:type="widgets.brease.Label" id="Label42" top="147" left="259" zIndex="8" text="[‰]" />
