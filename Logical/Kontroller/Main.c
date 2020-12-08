@@ -136,6 +136,21 @@ void _INIT ProgramInit(void) {
 
 void _CYCLIC ProgramCyclic(void) {
 	
+	
+	// On Off controller
+	if (failState == 0) {
+		if (mulde_1.olie.T_in <= ref-3) {
+			heater = 1;
+		}
+		else if (mulde_1.olie.T_in >= ref+3) {
+			heater = 0;	
+		}
+	}
+	
+	
+	
+/* 
+	// small signal controller
 	if(failState == 0) {
 		aaF_fun();
 		
@@ -143,6 +158,7 @@ void _CYCLIC ProgramCyclic(void) {
 		onOff_fun();
 		D_fun();
 	}
+*/
 }
 
 void _EXIT ProgramExit(void) {
