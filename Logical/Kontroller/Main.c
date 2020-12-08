@@ -135,13 +135,15 @@ void _INIT ProgramInit(void) {
 }
 
 void _CYCLIC ProgramCyclic(void) {
-	
-	if(failState == 0) {
-		aaF_fun();
 		
-		PWM_fun();
-		onOff_fun();
-		D_fun();
+	// On Off controller
+	if (failState == 0) {
+		if (mulde_1.olie.T_in <= ref-1) {
+			heater = 1;
+		}
+		else if (mulde_1.olie.T_in >= ref+1) {
+			heater = 0;	
+		}
 	}
 }
 
